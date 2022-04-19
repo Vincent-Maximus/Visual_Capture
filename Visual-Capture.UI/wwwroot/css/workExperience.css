@@ -1,0 +1,69 @@
+/*work-work*/
+
+.current {
+    background-color: var(--dark);
+    color: var(--white);
+    width: 150px;
+    text-align: center;
+    padding: 5px;
+    float: right;
+    margin: 10px;
+}
+.notCurrent {
+    padding: 20px;
+    margin: 10px;
+}
+
+.workCardContainer {
+    width: 100%;
+    overflow-x: scroll;
+    display: flex;
+    padding: 3rem;
+}
+
+
+.workCard {
+    min-width: 360px;
+    border-right: 10px var(--dark);
+}
+
+
+.workCard:not(:first-child) {
+    margin-left: 40px;
+}
+
+.workCard:last-child {
+    padding-right: 50px;
+}
+
+.workImg {
+    width: 60%;
+    float: right;
+}
+
+.workHeader {
+    position: relative;
+    border-right: 1px solid var(--dark);
+}
+
+.titleDate {
+    padding-right: 50px;
+    font-size: 1.5em;
+    border-bottom: 4px solid var(--dark);
+}
+
+.titleInfo {
+    border-left: 1px solid var(--dark);
+}
+
+.titleInfoCard{
+    font-size: 0.6em;
+}
+
+.date{
+    font-size: 0.5em;
+    position: absolute;
+    z-index: 1;
+    top: 8px;
+    right: 5px;
+}

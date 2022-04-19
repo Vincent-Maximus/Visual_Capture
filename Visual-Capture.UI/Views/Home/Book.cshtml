@@ -1,0 +1,40 @@
+@model Visual_Capture.BLL.Entities.Reservation
+
+@{
+    ViewBag.Title = "Book";
+    Layout = "_Layout";
+}
+
+<h2>Create</h2>
+
+<form method="post">
+    <div class="container">
+        <div class="row">
+            
+            <label asp-for="UserId"></label>
+            <input asp-for="DateTime" class="form-control"/>
+            @* <span asp-validation-for="AmountPeople" class="color-yellow"></span> *@
+        </div>
+        
+        <div class="row">
+            <label asp-for="TypeReservationId"></label>
+            <input asp-for="TypeReservationId" class="form-control"/>
+            @* <span asp-validation-for="TypeReservationId" class="color-yellow"></span> *@
+        </div>
+
+
+        <div class="row">
+            <div class="roundBorderButton">
+                <button class="" type="submit">Aanmaken</button>
+            </div>
+
+            <div class="roundBorderButton">
+                <a class="noAWhite" asp-controller="Home" asp-action="Index">Terug naar overzicht</a>
+            </div>
+        </div>
+       
+    </div>
+</form>
+
+<partial name="_ValidationScriptsPartial"/>        
+

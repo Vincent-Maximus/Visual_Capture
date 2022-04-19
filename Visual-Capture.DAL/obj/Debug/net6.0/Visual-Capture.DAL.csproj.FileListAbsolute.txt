@@ -1,0 +1,12 @@
+/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.DAL/bin/Debug/net6.0/Visual-Capture.DAL.deps.json
+/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.DAL/bin/Debug/net6.0/Visual-Capture.DAL.dll
+/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.DAL/bin/Debug/net6.0/Visual-Capture.DAL.pdb
+/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.DAL/obj/Debug/net6.0/Visual-Capture.DAL.csproj.AssemblyReference.cache
+/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.DAL/obj/Debug/net6.0/Visual-Capture.DAL.GeneratedMSBuildEditorConfig.editorconfig
+/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.DAL/obj/Debug/net6.0/Visual-Capture.DAL.AssemblyInfoInputs.cache
+/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.DAL/obj/Debug/net6.0/Visual-Capture.DAL.AssemblyInfo.cs
+/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.DAL/obj/Debug/net6.0/Visual-Capture.DAL.csproj.CoreCompileInputs.cache
+/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.DAL/obj/Debug/net6.0/Visual-Capture.DAL.dll
+/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.DAL/obj/Debug/net6.0/refint/Visual-Capture.DAL.dll
+/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.DAL/obj/Debug/net6.0/Visual-Capture.DAL.pdb
+/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.DAL/obj/Debug/net6.0/ref/Visual-Capture.DAL.dll

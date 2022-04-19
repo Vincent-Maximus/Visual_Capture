@@ -1,0 +1,75 @@
+@font-face {
+    font-family: Black;
+    src: url("../font/sofia/sofiaProBlack.otf");
+}
+
+@font-face {
+    font-family: Bold;
+    src: url("../font/sofia/sofiaProBold.otf");
+}
+
+@font-face {
+    font-family: SemiBold;
+    src: url("../font/sofia/sofiaProSemiBold.otf");
+}
+
+@font-face {
+    font-family: Medium;
+    src: url("../font/sofia/sofiaProMedium.otf");
+}
+
+@font-face {
+    font-family: Regular;
+    src: url("../font/sofia/sofiaProRegular.otf");
+}
+
+@font-face {
+    font-family: light;
+    src: url("../font/sofia/sofiaProLight.otf");
+}
+
+@font-face {
+    font-family: Ultralight;
+    src: url("../font/sofia/sofiaProUltraLight.otf");
+}
+
+/*CaslonPro*/
+@font-face {
+    font-family: caslonBold;
+    src: url("../font/Caslon/ACaslonPro-Bold.otf");
+}
+
+@font-face {
+    font-family: caslonSemiBold;
+    src: url("../font/Caslon/ACaslonPro-Semibold.otf");
+}
+
+@font-face {
+font-family: caslonRegular;
+src: url("../font/Caslon/ACaslonPro-Regular.otf");
+}
+
+
+.Black {
+    font-family: Black !important;
+}
+
+.Bold {
+    font-family: Bold !important;
+}
+
+.SemiBold {
+    font-family: SemiBold !important;
+}
+
+.Medium {
+    font-family: Medium !important;
+}
+
+.Regular {
+    font-family: Regular !important;
+}
+
+.Light {
+    font-family: light !important;
+}

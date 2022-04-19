@@ -1,0 +1,522 @@
+﻿@* @using Visual_Capture.UI.ViewModels *@
+@using Visual_Capture.BLL.Entities
+@using Visual_Capture.DAL.Data
+@* @model Visual_Capture.DAL.Models.Reservation *@
+@model Visual_Capture.BLL.Entities.ReservationPossibilities
+@* @model List<Visual_Capture.DAL.Models.Reservation> *@
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div>
+    <picture>
+        <source type="image/webp" srcset="img/homepage/intro/banner_1920x911.webp">
+        <source type="image/jpg" srcset="img/homepage/intro/banner_1920x911.jpg">
+        <img class="intro-img" alt="intro image">
+    </picture>
+    <p class="whatWeDo">Het vast leggen van jouw visie</p>
+</div>
+
+<!--spacing-->
+<div class="spacer-5"></div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col">Type</div>
+        <div class="col">Date</div>
+        <div class="col">Amount of people</div>
+        <div class="col">Photographer</div>
+    </div>
+</div>
+<div class="spacer-5"></div>
+
+
+<form method="post" asp-action="Create">
+    <div class="container">
+        <div class="row">
+            <div class="div">
+
+                @* $1$ test #1# *@
+                @* <div class="form-group row"> *@
+                @*     <label class="col-sm-2 col-form-label">Technician</label> *@
+                @*     <div class="col-sm-8"> *@
+                @*         <select asp-for="TypeReservation.Name" asp-items=@(new SelectList(Model.TypeReservation, "TypeReservationId", "Name"))> *@
+                @*             <option value="">Select...</option> *@
+                @*         </select> *@
+                @*         $1$<span asp-validation-for="Selected" class="text-danger"></span>#1# *@
+                @*     </div> *@
+                @* </div> *@
+                @* $1$ test #1# *@
+
+
+                <label asp-for="AvailableDateTimes"></label>
+                <input asp-for="AvailableDateTimes" class="form-control"/>
+                
+                @* <select asp-for="TypeReservations" asp-items="@(new SelectList(Model.TypeReservations, nameof(TypeReservation.Id), nameof(TypeReservation.Name)))"> *@
+                @*     <option>Please select one</option> *@
+                @* </select> *@
+
+                @* *@
+                @* <select asp-for="TypeReservations" asp-items="@(new SelectList(Model.TypeReservations, nameof(TypeReservation.Id), nameof(TypeReservation.Name)))"> *@
+                @*     <option>Please select one</option> *@
+                @* </select> *@
+
+                @* <label asp-for="TypeReservations.MinPeople"></label> *@
+                @* <input asp-for="DateTime" class="form-control"/> *@
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="roundBorderButton">
+                <button class="" asp-controller="Home" asp-action="Book" type="submit">Book</button>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+
+
+<!--spacing-->
+<div class="spacer-5"></div>
+
+
+<div class="project color-green">
+    <div class="m-0 p-0 ">
+        <div class="row m-0 p-0">
+            <div class="col-lg-6 col-md-6 m-0 p-0">
+                <div class="musicContextHolder">
+                    <div cl ass="projectTitle">
+                        In Ontwikkeling..
+                    </div>
+                    <div class="context">
+                        De Visual Capture website is nog in ontwikkeling, maar buitengewoon bereikbaar. Benieuwd naar wat Visual Capture voor jouw bedrijf kan betekenen? Aarzel dan niet en neem contact op.
+                    </div>
+                    <div class="roundBorderButton">
+                        <a href="tel:0631521355" class="noAWhite">
+                            Bellen
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 m-0 p-0">
+                <picture>
+                    <source type="image/webp" srcset="img/homepage/progress/lines.webp">
+                    <source type="image/jpg" srcset="img/homepage/progress/lines.jpg">
+                    <img class="inProgress" alt="">
+                </picture>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--anchor-->
+<div id="SocialIAm"></div>
+
+<!--spacing-->
+<div class="spacer-15"></div>
+
+<!--spacing-->
+<div class="spacer-15"></div>
+
+
+<div class="projectFullWidth color-yellow">
+    <div class="m-0 p-0 ">
+        <div class="row m-0 p-0">
+            <div class="col-lg-6 col-md-6 m-0 p-0">
+                <div class="musicContextHolder">
+                    <div class="projectTitle noAWhite">
+                        Portrait’s
+                    </div>
+                    <div class="context noAWhite">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                    </div>
+                    <div class="roundBorderButton">
+                        <a href="https://open.spotify.com/user/jhayudebsy2gfm0fevfs3sxti?si=5256378d52434082" class="noAWhite">
+                            Learn more
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 m-0 p-0">
+                <picture>
+                    <source type="image/webp" srcset="/img/homepage/weddings/webp/wedding.webp">
+                    <source type="image/png" srcset="/img/homepage/weddings/png/wedding.png">
+                    <img class="musicImg" alt="">
+                </picture>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="portfolio-container">
+    <div class="m-0 p-0 ">
+        <div class="row m-0 p-0">
+            <div class="col-lg-6 col-md-6 m-0 p-0">
+                <div class="portfolio-intro">
+                    <div class="title">
+                        <div class="sub">
+                            Capture
+                        </div>
+                        <div class="main">
+                            Couple's
+                        </div>
+                    </div>
+                    <picture>
+                        <source type="image/webp" srcset="/img/homepage/couples/webp/couple.webp">
+                        <source type="image/png" srcset="/img/homepage/couples/png/couple.png">
+                        <img class="portrait" alt="">
+                    </picture>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 m-0 p-0">
+                <div class="portfolio-intro-content">
+                    <div class="row m-0 p-0">
+                        <div class="subTitle">
+                            <div class="main">
+                                It's all about you
+                            </div>
+                            <div class="description">
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row m-0 p-0">
+                        <div class="col-lg-4 col-md-6 col-6 m-0 p-0">
+                            <picture>
+                                <source type="image/webp" srcset="/img/homepage/couples/webp/couple_1.webp">
+                                <source type="image/png" srcset="/img/homepage/couples/png/couple_1.png">
+                                <img class="mini-portraits" alt="">
+                            </picture>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-6 m-0 p-0">
+                            <picture>
+                                <source type="image/webp" srcset="/img/homepage/couples/webp/couple_2.webp">
+                                <source type="image/png" srcset="/img/homepage/couples/png/couple_2.png">
+                                <img class="mini-portraits" alt="">
+                            </picture>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-6 m-0 p-0">
+                            <picture>
+                                <source type="image/webp" srcset="/img/homepage/couples/webp/couple_3.webp">
+                                <source type="image/png" srcset="/img/homepage/couples/png/couple_3.png">
+                                <img class="mini-portraits" alt="">
+                            </picture>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-6 m-0 p-0">
+                            <picture>
+                                <source type="image/webp" srcset="/img/homepage/couples/webp/couple_4.webp">
+                                <source type="image/png" srcset="/img/homepage/couples/png/couple_4.png">
+                                <img class="mini-portraits" alt="">
+                            </picture>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-6 m-0 p-0">
+                            <picture>
+                                <source type="image/webp" srcset="img/homepage/couples/webp/couple_5.webp">
+                                <source type="image/png" srcset="img/homepage/couples/png/couple_5.png">
+                                <img class="mini-portraits" alt="">
+                            </picture> 
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-6 m-0 p-0">
+                            <picture>
+                                <source type="image/webp" srcset="img/homepage/couples/webp/couple_6.webp">
+                                <source type="image/png" srcset="img/homepage/couples/png/couple_6.png">
+                                <img class="mini-portraits" alt="">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--spacing-->
+<div class="spacer-15"></div>
+
+<div class="portfolio-container">
+    <div class="m-0 p-0 ">
+        <div class="row m-0 p-0">
+            <div class="col-lg-6 col-md-6 m-0 p-0">
+                <div class="portfolio-intro">
+                    <div class="title">
+                        <div class="sub">
+                            Capture
+                        </div>
+                        <div class="main">
+                            Portrait's
+                        </div>
+                    </div>
+                    <picture>
+                        <source type="image/webp" srcset="/img/homepage/portraits/webp/portrait.webp">
+                        <source type="image/png" srcset="/img/homepage/portraits/png/portrait.png">
+                        <img class="portrait" alt="">
+                    </picture>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 m-0 p-0">
+                <div class="portfolio-intro-content">
+                    <div class="row m-0 p-0">
+                        <div class="subTitle">
+                            <div class="main">
+                                It's all about you
+                            </div>
+                            <div class="description">
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row m-0 p-0">
+                        <div class="col-lg-4 col-md-6 col-6 m-0 p-0">
+                            <picture>
+                                <source type="image/webp" srcset="/img/homepage/portraits/webp/portrait_1.webp">
+                                <source type="image/png" srcset="/img/homepage/portraits/portrait_1.png">
+                                <img class="mini-portraits" alt="">
+                            </picture>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-6 m-0 p-0">
+                            <picture>
+                                <source type="image/webp" srcset="/img/homepage/portraits/webp/portrait_2.webp">
+                                <source type="image/png" srcset="/img/homepage/portraits/portrait_2.png">
+                                <img class="mini-portraits" alt="">
+                            </picture>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-6 m-0 p-0">
+                            <picture>
+                                <source type="image/webp" srcset="/img/homepage/portraits/webp/portrait_3.webp">
+                                <source type="image/png" srcset="/img/homepage/portraits/portrait_3.png">
+                                <img class="mini-portraits" alt="">
+                            </picture>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-6 m-0 p-0">
+                            <picture>
+                                <source type="image/webp" srcset="/img/homepage/portraits/webp/portrait_4.webp">
+                                <source type="image/png" srcset="/img/homepage/portraits/portrait_4.png">
+                                <img class="mini-portraits" alt="">
+                            </picture>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-6 m-0 p-0">
+                            <picture>
+                                <source type="image/webp" srcset="/img/homepage/portraits/webp/portrait_5.webp">
+                                <source type="image/png" srcset="/img/homepage/portraits/portrait_5.png">
+                                <img class="mini-portraits" alt="">
+                            </picture>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-6 m-0 p-0">
+                            <picture>
+                                <source type="image/webp" srcset="/img/homepage/portraits/webp/portrait_6.webp">
+                                <source type="image/png" srcset="/img/homepage/portraits/portrait_6.png">
+                                <img class="mini-portraits" alt="">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--spacing-->
+<div class="spacer-15"></div>
+
+<div class="portfolio-container">
+    <div class="m-0 p-0 ">
+        <div class="row m-0 p-0">
+            <div class="col-lg-6 col-md-6 m-0 p-0">
+                <div class="portfolio-intro">
+                    <div class="title">
+                        <div class="sub">
+                            Capture
+                        </div>
+                        <div class="main">
+                            Weddings's
+                        </div>
+                    </div>
+                    <picture>
+                        <source type="image/webp" srcset="/img/homepage/weddings/webp/wedding.webp">
+                        <source type="image/png" srcset="/img/homepage/weddings/png/wedding.png">
+                        <img class="portrait" alt="">
+                    </picture>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 m-0 p-0">
+                <div class="portfolio-intro-content">
+                    <div class="row m-0 p-0">
+                        <div class="subTitle">
+                            <div class="main">
+                                It's all about you
+                            </div>
+                            <div class="description">
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row m-0 p-0">
+                        <div class="col-lg-4 col-md-6 col-6 col-6 m-0 p-0">
+                            <picture>
+                                <source type="image/webp" srcset="/img/homepage/weddings/webp/wedding_1.webp">
+                                <source type="image/png" srcset="/img/homepage/weddings/png/wedding_1.png">
+                                <img class="mini-portraits" alt="">
+                            </picture>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-6 m-0 p-0">
+                            <picture>
+                                <source type="image/webp" srcset="/img/homepage/weddings/webp/wedding_2.webp">
+                                <source type="image/png" srcset="/img/homepage/weddings/png/wedding_2.png">
+                                <img class="mini-portraits" alt="">
+                            </picture>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-6 m-0 p-0">
+                            <picture>
+                                <source type="image/webp" srcset="/img/homepage/weddings/webp/wedding_3.webp">
+                                <source type="image/png" srcset="/img/homepage/weddings/png/wedding_3.png">
+                                <img class="mini-portraits" alt="">
+                            </picture>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-6 m-0 p-0">
+                            <picture>
+                                <source type="image/webp" srcset="/img/homepage/weddings/webp/wedding_4.webp">
+                                <source type="image/png" srcset="/img/homepage/weddings/png/wedding_4.png">
+                                <img class="mini-portraits" alt="">
+                            </picture>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-6 m-0 p-0">
+                            <picture>
+                                <source type="image/webp" srcset="/img/homepage/weddings/webp/wedding_5.webp">
+                                <source type="image/png" srcset="/img/homepage/weddings/png/wedding_5.png">
+                                <img class="mini-portraits" alt="">
+                            </picture>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-6 m-0 p-0">
+                            <picture>
+                                <source type="image/webp" srcset="/img/homepage/weddings/webp/wedding_6.webp">
+                                <source type="image/png" srcset="/img/homepage/weddings/png/wedding_6.png">
+                                <img class="mini-portraits" alt="">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--spacing-->
+<div class="spacer-15"></div>
+
+
+<div class="color-yellow">
+    <div class="socialContextHolder">
+        <div class="wideProjectTitle contextCenter">
+            Visual Capture is social
+        </div>
+        <div class="socialIcons contextCenter">
+
+            <a id="instagram" class="m-3 socialIcon" href="https://www.instagram.com/vincent.maximus/" target="_blank">
+                <picture>
+                    <source type="image/webp" srcset="img/mediaIcons/webp/instagram.webp">
+                    <source type="image/png" srcset="img/mediaIcons/png/instagram.png">
+                    <img alt="" width="68">
+                </picture>
+            </a>
+
+            <a id="linkedin" rel="noopener" class="m-3 socialIcon" href="https://www.linkedin.com/in/vincent-maximus"
+               target="_blank">
+                <picture>
+                    <source type="image/webp" srcset="img/mediaIcons/webp/linkedin.webp">
+                    <source type="image/png" srcset="img/mediaIcons/png/linkedin.png">
+                    <img alt="" width="65">
+                </picture>
+            </a>
+
+            <a id="whatsapp" rel="noopener" class="m-3 socialIcon" href="https://wa.me/310631521355?text=Hi%20Vincent"
+               target="_blank">
+                <picture>
+                    <source type="image/webp" srcset="img/mediaIcons/webp/whatsapp.webp">
+                    <source type="image/png" srcset="img/mediaIcons/png/whatsapp.png">
+                    <img alt="" width="68">
+                </picture>
+            </a>
+
+            <a id="mail" rel="noopener" class="m-3 socialIcon" href="mailto:info.visualcapture@gmail.com" target="_blank">
+                <picture>
+                    <source type="image/webp" srcset="img/mediaIcons/webp/mail.webp">
+                    <source type="image/png" srcset="img/mediaIcons/png/mail.png">
+                    <img alt="" width="80">
+                </picture>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!--spacing-->
+<div class="spacer-5"></div>
+
+<div class="portfolio-container">
+    <div class="storyHolder">
+        <div class="title">
+            Our Story
+        </div>
+
+        <div class="row m-0 p-0">
+            <div class="col-sm-12 col-md-6 m-0 p-0">
+                <div class="ourStoryText">
+                    <div class="coloredTitle">fermentum</div>
+                    <div class="title">The Name says it all</div>
+                    <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh praesent tristique magna sit amet. Convallis posuere morbi leo urna.</div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 m-0 p-0">
+                <picture>
+                    <source type="image/webp" srcset="img/homepage/intro/ourStory.webp">
+                    <source type="image/jpg" srcset="img/homepage/intro/ourStory.png">
+                    <img class="OurstoryPicture" alt="intro image">
+                </picture>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="color-white">
+    <div class="socialContextHolder">
+        <div class="wideProjectTitle contextCenter">
+            So, What do you want to do?
+        </div>
+        <div class="spacer-5"></div>
+        <div class="contextCenter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="optionButton color-blue">
+                            <a href="https://vincent-maximus.nl/work" target="_blank" class="noAWhite color-blue"
+                               id="viewWork">
+                                View work
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="optionButton color-yellow">
+                            <a href="#SocialIAm" class="noADark color-yellow"
+                               id="followMe">
+                                Follow me on social
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="optionButton color-green">
+                            <a href="#SocialIAm" class="noAWhite color-green"
+                               id="contactMe">
+                                Contact me
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

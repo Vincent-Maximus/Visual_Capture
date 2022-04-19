@@ -1,0 +1,150 @@
+﻿<!doctype html >
+<html lang="en">
+<head>
+    <meta name="google-site-verification" content="w2JYZ5qVhXJEJs4Rkz4NDIfVoi4aulFNhSYPF_Quxa0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] | Visual Capture</title>
+    <link rel="icon" href="~/img/general/favicon.jpg" type="image">
+    <link rel="stylesheet" href="~/css/fonts.css">
+    <!--bootstrap-->
+    <link rel="stylesheet" href="~/css/bootstrap.css">
+    <link rel="stylesheet" href="~/css/tempstyle.css">
+    <link rel="stylesheet" href="~/css/workExperience.css">
+    <link rel="stylesheet" href="~/css/projects.css">
+    <link rel="stylesheet" href="~/css/style.css">
+</head>
+
+<body>
+
+
+<div class="menu">
+    <a class="myName">Visual Capture</a>
+
+    <ul class="topnav">
+        
+        <li class="home"><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+        <li class="work right"><a asp-area="" asp-controller="Home" asp-action="Reservations">Reservations</a></li>
+        <li class="about right"><a asp-area="" asp-controller="Category" asp-action="Index">Categorys</a></li>
+        @* <li class="about"><a href="https://vincent-maximus.nl/about" target="_blank">About</a></li> *@
+        @* <li class="about right"><partial name="_LoginPartial"/></li> *@
+        
+    </ul>
+</div>
+
+    @RenderBody()
+
+<!--spacing-->
+<div class="spacer-15"></div>
+
+<div class="footer">
+    <div class="row m-0">
+        <div class="col-sm p-0">
+            <div class="contextCenter color-black pt-5 pb-5">
+                <a class="m-3 footerSocialIcon" rel="noopener" href="https://www.instagram.com/vincent.maximus/"
+                   target="_blank">
+                    <picture>
+                        <source type="image/webp" srcset="~/img/mediaIcons/webp/instagram.webp">
+                        <source type="image/png" srcset="~/img/mediaIcons/png/instagram.png">
+                        <img alt="" width="28">
+                    </picture>
+                </a>
+
+                <a class="m-3 footerSocialIcon" rel="noopener" href="https://www.linkedin.com/in/vincent-maximus"
+                   target="_blank">
+                    <picture>
+                        <source type="image/webp" srcset="~/img/mediaIcons/webp/linkedin.webp">
+                        <source type="image/png" srcset="~/img/mediaIcons/png/linkedin.png">
+                        <img alt="" width="25">
+                    </picture>
+                </a>
+                <a class="m-3 footerSocialIcon" rel="noopener" href="mailto:info.visualcapture@gmail.com" target="_blank">
+                    <picture>
+                        <source type="image/webp" srcset="~/img/mediaIcons/webp/mail.webp">
+                        <source type="image/png" srcset="~/img/mediaIcons/png/mail.png">
+                        <img alt="" width="40">
+                    </picture>
+                </a>
+            </div>
+        </div>
+        <div class="col-sm p-0">
+            <div class="contextCenter noADark">
+                Vincent Maximus<br>
+                Doormanlaan 54<br>
+                5694 EC Son en Breugel
+            </div>
+        </div>
+        <div class="col-sm p-0">
+            <div class="contextCenter noADark">
+                +31 6 3152 1355
+                <br>
+                vjp.maximus@gmail.com
+                <br>
+                Copyright © 2019-
+                <script language="javascript" type="text/javascript">var today = new Date();
+                var year = today.getFullYear();
+                document.write(year);</script>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/smoothScroll.js"></script>
+
+
+@* old *@
+
+@* *@
+@* *@
+@* *@
+@* <!DOCTYPE html> *@
+@* <html lang="en"> *@
+@* <head> *@
+@*     <meta charset="utf-8"/> *@
+@*     <meta name="viewport" content="width=device-width, initial-scale=1.0"/> *@
+@*     <title>@ViewData["Title"] - Visual_Capture</title> *@
+@*     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/> *@
+@*     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/> *@
+@*     <link rel="stylesheet" href="~/Visual_Capture.styles.css" asp-append-version="true"/> *@
+@* </head> *@
+@* <body> *@
+@* <header> *@
+@*     <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3"> *@
+@*         <div class="container-fluid"> *@
+@*             <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Visual_Capture</a> *@
+@*             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span></button> *@
+@*             <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between"> *@
+@*                 <ul class="navbar-nav flex-grow-1"> *@
+@*                     <li class="nav-item"> *@
+@*                         <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a> *@
+@*                     </li> *@
+@*                     <li class="nav-item"> *@
+@*                         <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a> *@
+@*                     </li> *@
+@*                 </ul> *@
+@*                 <partial name="_LoginPartial"/> *@
+@*             </div> *@
+@*         </div> *@
+@*     </nav> *@
+@* </header> *@
+@* <div class="container"> *@
+@*     <main role="main" class="pb-3"> *@
+@*         @RenderBody() *@
+@*     </main> *@
+@* </div> *@
+@* *@
+@* <footer class="border-top footer text-muted"> *@
+@*     <div class="container"> *@
+@*         &copy; 2022 - Visual_Capture - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a> *@
+@*     </div> *@
+@* </footer> *@
+@* <script src="~/lib/jquery/dist/jquery.min.js"></script> *@
+@* <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script> *@
+@* <script src="~/js/site.js" asp-append-version="true"></script> *@
+@* @await RenderSectionAsync("Scripts", required: false) *@
+@* </body> *@
+@* </html> *@

@@ -1,0 +1,40 @@
+@model Visual_Capture.BLL.Entities.Category
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "_Layout";
+}
+
+<h2>Create</h2>
+
+<form method="post">
+    <div class="container">
+        <div class="row">
+            
+            <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-control"/>
+            <span asp-validation-for="Name" class="color-yellow"></span>
+        </div>
+        
+        <div class="row">
+            <label asp-for="DisplayOrder"></label>
+            <input asp-for="DisplayOrder" class="form-control"/>
+            <span asp-validation-for="DisplayOrder" class="color-yellow"></span>
+        </div>
+
+
+        <div class="row">
+            <div class="roundBorderButton">
+                <button class="" type="submit">Aanmaken</button>
+            </div>
+
+            <div class="roundBorderButton">
+                <a class="noAWhite" asp-controller="Category" asp-action="Index">Terug naar overzicht</a>
+            </div>
+        </div>
+       
+    </div>
+</form>
+
+<partial name="_ValidationScriptsPartial"/>        
+

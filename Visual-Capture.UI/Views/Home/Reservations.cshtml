@@ -1,0 +1,28 @@
+@model List<Visual_Capture.BLL.Entities.Reservation>
+
+@{
+    ViewData["Title"] = "VC - Reservations";
+}
+<div class="container">
+    <div class="subTitle">
+        <div class="main">
+            @ViewData["Title"]
+        </div>
+        <div class="description">
+            Here you will see all of the reservations
+        </div>
+    </div>
+    
+    <!--spacing-->
+    <div class="spacer-5"></div>
+
+    @foreach (var reservations in @Model)
+    {
+        <div class="row">
+            <div class="col">@reservations.TypeReservation?.Name</div>
+            <div class="col">@reservations.DateTime</div>
+            <div class="col">@reservations.AmountPeople</div>
+            <div class="col">@reservations.Photographer?.Name</div>
+        </div>
+    }
+</div>

@@ -1,0 +1,38 @@
+.card-container {
+    width: 100%;
+    overflow-x: scroll;
+    display: flex;
+    padding: 3rem;
+}
+
+.musicCard {
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+    /*padding: 1.5rem;*/
+    transition: 0.2s;
+}
+
+
+.musicCard:first-child{
+    margin-left: 60%;
+}
+
+.musicCard:not(:first-child) {
+    margin-left: 12px;
+}
+
+.musicCard:hover {
+    transform: translateY(-0.2rem);
+}
+
+.no-scrollbar {
+    scrollbar-width: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+

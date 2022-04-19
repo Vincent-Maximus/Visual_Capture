@@ -1,0 +1,29 @@
+@model List<Visual_Capture.BLL.Entities.Category>
+
+@{
+    ViewBag.Title = "category";
+    Layout = "_Layout";
+}
+
+<h2>category</h2>
+
+<div>
+    <a asp-controller="Category" asp-action="Create">Create</a>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col">Category Name</div>
+        <div class="col">Display order</div>
+    </div>
+    @foreach (var obj in Model)
+    {
+        <div class="row">
+            <div class="col">@obj.Name</div>
+            <div class="col">@obj.DisplayOrder</div>
+            <a asp-controller="Category" asp-action="Edit" asp-route-id="@obj.Id">Edit</a>
+            <a asp-controller="Category" asp-action="Delete" asp-route-id="@obj.Id">Delete</a>
+    
+        </div>
+    }
+    
+</div>
