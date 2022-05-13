@@ -1164,7 +1164,7 @@
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.Core": "2.2.5",
           "Microsoft.EntityFrameworkCore": "6.0.4",
-          "Visual-Capture.DAL": "1.0.0"
+          "Visual-Capture.Contracts": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Visual-Capture.BLL.dll": {}
@@ -1173,12 +1173,23 @@
           "bin/placeholder/Visual-Capture.BLL.dll": {}
         }
       },
+      "Visual-Capture.Contracts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Visual-Capture.Contracts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Visual-Capture.Contracts.dll": {}
+        }
+      },
       "Visual-Capture.DAL/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "6.0.4",
-          "Pomelo.EntityFrameworkCore.MySql": "6.0.1"
+          "Pomelo.EntityFrameworkCore.MySql": "6.0.1",
+          "Visual-Capture.Contracts": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Visual-Capture.DAL.dll": {}
@@ -4184,6 +4195,11 @@
       "path": "../Visual-Capture.BLL/Visual-Capture.BLL.csproj",
       "msbuildProject": "../Visual-Capture.BLL/Visual-Capture.BLL.csproj"
     },
+    "Visual-Capture.Contracts/1.0.0": {
+      "type": "project",
+      "path": "../Visual-Capture.Contracts/Visual-Capture.Contracts.csproj",
+      "msbuildProject": "../Visual-Capture.Contracts/Visual-Capture.Contracts.csproj"
+    },
     "Visual-Capture.DAL/1.0.0": {
       "type": "project",
       "path": "../Visual-Capture.DAL/Visual-Capture.DAL.csproj",
@@ -4192,7 +4208,8 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Visual-Capture.BLL >= 1.0.0"
+      "Visual-Capture.BLL >= 1.0.0",
+      "Visual-Capture.DAL >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -4222,6 +4239,9 @@
           "projectReferences": {
             "/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.BLL/Visual-Capture.BLL.csproj": {
               "projectPath": "/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.BLL/Visual-Capture.BLL.csproj"
+            },
+            "/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.DAL/Visual-Capture.DAL.csproj": {
+              "projectPath": "/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.DAL/Visual-Capture.DAL.csproj"
             }
           }
         }

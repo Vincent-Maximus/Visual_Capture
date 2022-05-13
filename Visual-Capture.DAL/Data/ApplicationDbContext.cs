@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using Visual_Capture.DAL.DTO;
+using Visual_Capture.Contracts.DTO;
 
 namespace Visual_Capture.DAL.Data;
 

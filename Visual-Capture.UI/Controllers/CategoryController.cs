@@ -1,25 +1,35 @@
 using System.Collections;
 using Microsoft.AspNetCore.Mvc;
-using Visual_Capture.DAL;
-using Visual_Capture.DAL.Data;
+using System.Linq;
 using Visual_Capture.BLL.Entities;
+using Visual_Capture.BLL.Manager;
+using Visual_Capture.Contracts.DTO;
+using Visual_Capture.Contracts.Interfaces;
 
 namespace Visual_Capture.UI.Controllers
 {
     public class CategoryController : Controller
     {
-        private readonly CategoryDal _categoryDal;
+        private readonly IDal<CategoryDTO> _category;
 
-        public CategoryController(CategoryDal categoryDal)
+        public CategoryController(IDal<CategoryDTO> category)
         {
-            _categoryDal = categoryDal;
+            _category = category;
         }
-
 
         public IActionResult Index()
         {
-            List<Category> obj = _categoryDal.Get();
-            return View(obj);
+            CategoryManager categoryManager = new CategoryManager(_category);
+            // List<Category> obj = categoryManager.GetAll();
+           var categories = categoryManager.GetAll().Select(category => new Category()
+            {
+                Id = category.Id,
+                Name = category.Name,
+                DisplayOrder = category.DisplayOrder,
+                CreateDateTime = category.CreateDateTime,
+            }).ToList();
+
+            return View(categories);
             // return View(_categoryDal.GetCategories());
             // IEnumerable<Category> objCategoryList = _db.Categories;
             // return View(objCategoryList);
@@ -33,63 +43,25 @@ namespace Visual_Capture.UI.Controllers
         }
 
         //GET
-        [HttpPost]
-        [ValidateAntiForgeryToken] //auto inject valid key
-        public IActionResult Create(Category obj)
-        {
-            //custom validation
-            if (obj.Name == obj.DisplayOrder.ToString())
-            {
-                ModelState.AddModelError("name", "The displayOrder Cannot exactly match the name.");
-            }
-
-            if (ModelState.IsValid)
-            {
-                _categoryDal.Create(obj);
-            }
-
-            return View(obj);
-        }
-
-
-        //GET
         public IActionResult Edit(Guid id)
         {
-            var categoryFromDb = _categoryDal.Edit(id);
+            // var categoryFromDb = _categoryDal.Edit(id);
+            //
+            // //just in case someone deleted at the same time.
+            // if (categoryFromDb == null)
+            // {
+            //     return NotFound();
+            // }
 
-            //just in case someone deleted at the same time.
-            if (categoryFromDb == null)
-            {
-                return NotFound();
-            }
-
-            return View(categoryFromDb);
+            // return View(categoryFromDb);
+            return View();
         }
-
-        //GET
-        [HttpPost]
-        [ValidateAntiForgeryToken] //auto inject valid key
-        public IActionResult Edit(Category obj)
-        {
-            if (obj.Name == obj.DisplayOrder.ToString())
-            {
-                ModelState.AddModelError("name", "The displayOrder Cannot exactly match the name.");
-            }
-
-            if (ModelState.IsValid)
-            {
-                _categoryDal.Edit(obj);
-                return RedirectToAction("Index");
-            }
-
-            return View(obj);
-        }
-
+        
         public IActionResult Delete(Guid id)
         {
             //get object
-            var categoryFromDb = _categoryDal.Delete(id);
-
+            // var categoryFromDb = _categoryDal.Delete(id);
+            //
             return RedirectToAction("Index");
         }
     }

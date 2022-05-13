@@ -1,9 +1,10 @@
-using Visual_Capture.DAL.DTO;
-using Visual_Capture.DAL.Types.Interfaces;
+using Visual_Capture.Contracts.DTO;
+using Visual_Capture.Contracts;
+using Visual_Capture.Contracts.Interfaces;
 
 namespace Visual_Capture.DAL.Data;
 
-public class CategoryDal : IDal<CategoryDTO>
+public class CategoryDal : IDal<CategoryDTO> 
 {
     private readonly ApplicationDbContext _db;
 
@@ -12,52 +13,59 @@ public class CategoryDal : IDal<CategoryDTO>
         _db = db;
     }
 
+    public CategoryDTO Get(Guid? id)
+    {
+        return _db.Categories.Find(id);
+    }
     
     //Get
-    public List<CategoryDTO> Get()
+    public List<CategoryDTO> GetAll()
     {
         return _db.Categories.ToList();
     }
 
     //Create
-    public void Create(CategoryDTO obj)
+    public bool Create(CategoryDTO obj)
     {
         _db.Categories.Add(obj);
         _db.SaveChanges();
+        
+        return true;
     }
 
-    //Edit
 
     //get edit/id data
-    public object Edit(Guid? id)
+    public object Update(Guid? id)
     {
         return _db.Categories.Find(id)!;
     }
 
     //save changes (update item)
-    public void Edit(CategoryDTO obj)
+    public bool Update(CategoryDTO obj)
     {
         _db.Categories.Update(obj);
         _db.SaveChanges();
+        
+        return true;
     }
 
     //Delete
 
     //get delete/id data
-    public object Delete(Guid? id)
+    public bool Delete(Guid? id)
     {
         var categoryFromDb = _db.Categories.Find(id);
 
         //just in case someone deleted at the same time.
         if (categoryFromDb == null)
         {
-            return null;
+            return false;
         }
 
         //actually remove from the database
         _db.Categories.Remove(categoryFromDb);
         _db.SaveChanges();
 
-        return categoryFromDb;
+        return true;
     }
 }

@@ -1,0 +1,254 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/vincentmaximus/RiderProjects/Visual_Capture/IServiceCollection/IServiceCollection.csproj": {}
+  },
+  "projects": {
+    "/Users/vincentmaximus/RiderProjects/Visual_Capture/IServiceCollection/IServiceCollection.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/vincentmaximus/RiderProjects/Visual_Capture/IServiceCollection/IServiceCollection.csproj",
+        "projectName": "IServiceCollection",
+        "projectPath": "/Users/vincentmaximus/RiderProjects/Visual_Capture/IServiceCollection/IServiceCollection.csproj",
+        "packagesPath": "/Users/vincentmaximus/.nuget/packages/",
+        "outputPath": "/Users/vincentmaximus/RiderProjects/Visual_Capture/IServiceCollection/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/vincentmaximus/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.BLL/Visual-Capture.BLL.csproj": {
+                "projectPath": "/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.BLL/Visual-Capture.BLL.csproj"
+              },
+              "/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.Contracts/Visual-Capture.Contracts.csproj": {
+                "projectPath": "/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.Contracts/Visual-Capture.Contracts.csproj"
+              },
+              "/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.DAL/Visual-Capture.DAL.csproj": {
+                "projectPath": "/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.DAL/Visual-Capture.DAL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.200/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.BLL/Visual-Capture.BLL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.BLL/Visual-Capture.BLL.csproj",
+        "projectName": "Visual-Capture.BLL",
+        "projectPath": "/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.BLL/Visual-Capture.BLL.csproj",
+        "packagesPath": "/Users/vincentmaximus/.nuget/packages/",
+        "outputPath": "/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.BLL/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/vincentmaximus/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.Contracts/Visual-Capture.Contracts.csproj": {
+                "projectPath": "/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.Contracts/Visual-Capture.Contracts.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.200/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.Contracts/Visual-Capture.Contracts.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.Contracts/Visual-Capture.Contracts.csproj",
+        "projectName": "Visual-Capture.Contracts",
+        "projectPath": "/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.Contracts/Visual-Capture.Contracts.csproj",
+        "packagesPath": "/Users/vincentmaximus/.nuget/packages/",
+        "outputPath": "/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.Contracts/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/vincentmaximus/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.200/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.DAL/Visual-Capture.DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.DAL/Visual-Capture.DAL.csproj",
+        "projectName": "Visual-Capture.DAL",
+        "projectPath": "/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.DAL/Visual-Capture.DAL.csproj",
+        "packagesPath": "/Users/vincentmaximus/.nuget/packages/",
+        "outputPath": "/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.DAL/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/vincentmaximus/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.Contracts/Visual-Capture.Contracts.csproj": {
+                "projectPath": "/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.Contracts/Visual-Capture.Contracts.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.4, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.200/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

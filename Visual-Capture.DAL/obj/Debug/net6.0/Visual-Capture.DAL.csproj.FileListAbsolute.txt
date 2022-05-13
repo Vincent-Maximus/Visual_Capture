@@ -10,3 +10,6 @@
 /Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.DAL/obj/Debug/net6.0/refint/Visual-Capture.DAL.dll
 /Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.DAL/obj/Debug/net6.0/Visual-Capture.DAL.pdb
 /Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.DAL/obj/Debug/net6.0/ref/Visual-Capture.DAL.dll
+/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.DAL/obj/Debug/net6.0/Visual-Capture.DAL.csproj.CopyComplete
+/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.DAL/bin/Debug/net6.0/Visual-Capture.Contracts.dll
+/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.DAL/bin/Debug/net6.0/Visual-Capture.Contracts.pdb

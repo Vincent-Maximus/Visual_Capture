@@ -1,8 +1,6 @@
 /Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.BLL/bin/Debug/net6.0/Visual-Capture.BLL.deps.json
 /Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.BLL/bin/Debug/net6.0/Visual-Capture.BLL.dll
 /Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.BLL/bin/Debug/net6.0/Visual-Capture.BLL.pdb
-/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.BLL/bin/Debug/net6.0/Visual-Capture.DAL.dll
-/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.BLL/bin/Debug/net6.0/Visual-Capture.DAL.pdb
 /Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.BLL/obj/Debug/net6.0/Visual-Capture.BLL.csproj.AssemblyReference.cache
 /Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.BLL/obj/Debug/net6.0/Visual-Capture.BLL.GeneratedMSBuildEditorConfig.editorconfig
 /Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.BLL/obj/Debug/net6.0/Visual-Capture.BLL.AssemblyInfoInputs.cache
@@ -13,3 +11,5 @@
 /Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.BLL/obj/Debug/net6.0/refint/Visual-Capture.BLL.dll
 /Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.BLL/obj/Debug/net6.0/Visual-Capture.BLL.pdb
 /Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.BLL/obj/Debug/net6.0/ref/Visual-Capture.BLL.dll
+/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.BLL/bin/Debug/net6.0/Visual-Capture.Contracts.dll
+/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.BLL/bin/Debug/net6.0/Visual-Capture.Contracts.pdb

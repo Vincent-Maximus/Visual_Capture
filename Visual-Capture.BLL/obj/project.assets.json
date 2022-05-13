@@ -313,19 +313,6 @@
           "lib/netstandard2.0/_._": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Relational/6.0.1": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore": "6.0.1",
-          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0"
-        },
-        "compile": {
-          "lib/net6.0/Microsoft.EntityFrameworkCore.Relational.dll": {}
-        },
-        "runtime": {
-          "lib/net6.0/Microsoft.EntityFrameworkCore.Relational.dll": {}
-        }
-      },
       "Microsoft.Extensions.Caching.Abstractions/6.0.0": {
         "type": "package",
         "dependencies": {
@@ -354,10 +341,10 @@
           "lib/netstandard2.0/Microsoft.Extensions.Caching.Memory.dll": {}
         }
       },
-      "Microsoft.Extensions.Configuration.Abstractions/6.0.0": {
+      "Microsoft.Extensions.Configuration.Abstractions/2.2.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Primitives": "6.0.0"
+          "Microsoft.Extensions.Primitives": "2.2.0"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
@@ -533,15 +520,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "MySqlConnector/2.1.2": {
-        "type": "package",
-        "compile": {
-          "lib/net6.0/MySqlConnector.dll": {}
-        },
-        "runtime": {
-          "lib/net6.0/MySqlConnector.dll": {}
-        }
-      },
       "Newtonsoft.Json/9.0.1": {
         "type": "package",
         "dependencies": {
@@ -573,20 +551,6 @@
         },
         "runtime": {
           "lib/netstandard1.0/Newtonsoft.Json.dll": {}
-        }
-      },
-      "Pomelo.EntityFrameworkCore.MySql/6.0.1": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore.Relational": "[6.0.1, 7.0.0)",
-          "Microsoft.Extensions.DependencyInjection": "6.0.0",
-          "MySqlConnector": "2.1.2"
-        },
-        "compile": {
-          "lib/net6.0/Pomelo.EntityFrameworkCore.MySql.dll": {}
-        },
-        "runtime": {
-          "lib/net6.0/Pomelo.EntityFrameworkCore.MySql.dll": {}
         }
       },
       "runtime.native.System/4.0.0": {
@@ -1158,18 +1122,14 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
-      "Visual-Capture.DAL/1.0.0": {
+      "Visual-Capture.Contracts/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore": "6.0.4",
-          "Pomelo.EntityFrameworkCore.MySql": "6.0.1"
-        },
         "compile": {
-          "bin/placeholder/Visual-Capture.DAL.dll": {}
+          "bin/placeholder/Visual-Capture.Contracts.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Visual-Capture.DAL.dll": {}
+          "bin/placeholder/Visual-Capture.Contracts.dll": {}
         }
       }
     }
@@ -1501,20 +1461,6 @@
         "microsoft.entityframeworkcore.analyzers.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Relational/6.0.1": {
-      "sha512": "abaCEEeeB0xlMYDD+m9kmhQh5aipJ5s3UbyQVBfMaZeCiZHXST0eWuJRX63E3e7K/mju5WEHiybV/hizng7q/w==",
-      "type": "package",
-      "path": "microsoft.entityframeworkcore.relational/6.0.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "lib/net6.0/Microsoft.EntityFrameworkCore.Relational.dll",
-        "lib/net6.0/Microsoft.EntityFrameworkCore.Relational.xml",
-        "microsoft.entityframeworkcore.relational.6.0.1.nupkg.sha512",
-        "microsoft.entityframeworkcore.relational.nuspec"
-      ]
-    },
     "Microsoft.Extensions.Caching.Abstractions/6.0.0": {
       "sha512": "bcz5sSFJbganH0+YrfvIjJDIcKNW7TL07C4d1eTmXy/wOt52iz4LVogJb6pazs7W0+74j0YpXFErvp++Aq5Bsw==",
       "type": "package",
@@ -1553,23 +1499,17 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Extensions.Configuration.Abstractions/6.0.0": {
-      "sha512": "qWzV9o+ZRWq+pGm+1dF+R7qTgTYoXvbyowRoBxQJGfqTpqDun2eteerjRQhq5PQ/14S+lqto3Ft4gYaRyl4rdQ==",
+    "Microsoft.Extensions.Configuration.Abstractions/2.2.0": {
+      "sha512": "65MrmXCziWaQFrI0UHkQbesrX5wTwf9XPjY5yFm/VkgJKFJ5gqvXRoXjIZcf2wLi5ZlwGz/oMYfyURVCWbM5iw==",
       "type": "package",
-      "path": "microsoft.extensions.configuration.abstractions/6.0.0",
+      "path": "microsoft.extensions.configuration.abstractions/2.2.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/net461/Microsoft.Extensions.Configuration.Abstractions.dll",
-        "lib/net461/Microsoft.Extensions.Configuration.Abstractions.xml",
         "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.xml",
-        "microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
-        "microsoft.extensions.configuration.abstractions.nuspec",
-        "useSharedDesignerContext.txt"
+        "microsoft.extensions.configuration.abstractions.2.2.0.nupkg.sha512",
+        "microsoft.extensions.configuration.abstractions.nuspec"
       ]
     },
     "Microsoft.Extensions.DependencyInjection/6.0.0": {
@@ -1839,35 +1779,6 @@
         "runtime.json"
       ]
     },
-    "MySqlConnector/2.1.2": {
-      "sha512": "JVokQTUNN3WHAu9Vw8ieeq1dXTFokJiig5P0VJ4f439UxRrsPo6SaVWC8Zdm6mkPeQFhZ0/9afdWa02EY/1j/w==",
-      "type": "package",
-      "path": "mysqlconnector/2.1.2",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "lib/net45/MySqlConnector.dll",
-        "lib/net45/MySqlConnector.xml",
-        "lib/net461/MySqlConnector.dll",
-        "lib/net461/MySqlConnector.xml",
-        "lib/net471/MySqlConnector.dll",
-        "lib/net471/MySqlConnector.xml",
-        "lib/net5.0/MySqlConnector.dll",
-        "lib/net5.0/MySqlConnector.xml",
-        "lib/net6.0/MySqlConnector.dll",
-        "lib/net6.0/MySqlConnector.xml",
-        "lib/netcoreapp3.1/MySqlConnector.dll",
-        "lib/netcoreapp3.1/MySqlConnector.xml",
-        "lib/netstandard2.0/MySqlConnector.dll",
-        "lib/netstandard2.0/MySqlConnector.xml",
-        "lib/netstandard2.1/MySqlConnector.dll",
-        "lib/netstandard2.1/MySqlConnector.xml",
-        "logo.png",
-        "mysqlconnector.2.1.2.nupkg.sha512",
-        "mysqlconnector.nuspec"
-      ]
-    },
     "Newtonsoft.Json/9.0.1": {
       "sha512": "U82mHQSKaIk+lpSVCbWYKNavmNH1i5xrExDEquU1i6I5pV6UMOqRnJRSlKO3cMPfcpp0RgDY+8jUXHdQ4IfXvw==",
       "type": "package",
@@ -1893,20 +1804,6 @@
         "newtonsoft.json.9.0.1.nupkg.sha512",
         "newtonsoft.json.nuspec",
         "tools/install.ps1"
-      ]
-    },
-    "Pomelo.EntityFrameworkCore.MySql/6.0.1": {
-      "sha512": "sFIo5e9RmQoCTEvH6EeSV8ptmX3dw/6XgyD8R93X/i7A9+XCeG9KTjSNjrszVjVOtCu/eyvYqqcv2uZ/BHhlYA==",
-      "type": "package",
-      "path": "pomelo.entityframeworkcore.mysql/6.0.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "icon.png",
-        "lib/net6.0/Pomelo.EntityFrameworkCore.MySql.dll",
-        "lib/net6.0/Pomelo.EntityFrameworkCore.MySql.xml",
-        "pomelo.entityframeworkcore.mysql.6.0.1.nupkg.sha512",
-        "pomelo.entityframeworkcore.mysql.nuspec"
       ]
     },
     "runtime.native.System/4.0.0": {
@@ -4164,17 +4061,17 @@
         "system.xml.xdocument.nuspec"
       ]
     },
-    "Visual-Capture.DAL/1.0.0": {
+    "Visual-Capture.Contracts/1.0.0": {
       "type": "project",
-      "path": "../Visual-Capture.DAL/Visual-Capture.DAL.csproj",
-      "msbuildProject": "../Visual-Capture.DAL/Visual-Capture.DAL.csproj"
+      "path": "../Visual-Capture.Contracts/Visual-Capture.Contracts.csproj",
+      "msbuildProject": "../Visual-Capture.Contracts/Visual-Capture.Contracts.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "Microsoft.AspNetCore.Mvc.Core >= 2.2.5",
       "Microsoft.EntityFrameworkCore >= 6.0.4",
-      "Visual-Capture.DAL >= 1.0.0"
+      "Visual-Capture.Contracts >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -4202,8 +4099,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.DAL/Visual-Capture.DAL.csproj": {
-              "projectPath": "/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.DAL/Visual-Capture.DAL.csproj"
+            "/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.Contracts/Visual-Capture.Contracts.csproj": {
+              "projectPath": "/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.Contracts/Visual-Capture.Contracts.csproj"
             }
           }
         }

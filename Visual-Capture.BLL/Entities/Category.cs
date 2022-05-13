@@ -15,4 +15,11 @@ public class Category
     [Range(1,100, ErrorMessage = "Display Order must between 1 and 100 only")]
     public int DisplayOrder { get; set; }
     public DateTime CreateDateTime { get; set; } = DateTime.Now;
+    
+    // update
+
+    public Category()
+    {
+        
+    }
 }

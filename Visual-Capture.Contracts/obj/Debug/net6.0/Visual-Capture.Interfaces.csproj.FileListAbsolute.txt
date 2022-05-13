@@ -1,0 +1,12 @@
+/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.Interfaces/bin/Debug/net6.0/Visual-Capture.Interfaces.deps.json
+/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.Interfaces/bin/Debug/net6.0/Visual-Capture.Interfaces.dll
+/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.Interfaces/bin/Debug/net6.0/Visual-Capture.Interfaces.pdb
+/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.Interfaces/obj/Debug/net6.0/Visual-Capture.Interfaces.csproj.AssemblyReference.cache
+/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.Interfaces/obj/Debug/net6.0/Visual-Capture.Interfaces.GeneratedMSBuildEditorConfig.editorconfig
+/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.Interfaces/obj/Debug/net6.0/Visual-Capture.Interfaces.AssemblyInfoInputs.cache
+/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.Interfaces/obj/Debug/net6.0/Visual-Capture.Interfaces.AssemblyInfo.cs
+/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.Interfaces/obj/Debug/net6.0/Visual-Capture.Interfaces.csproj.CoreCompileInputs.cache
+/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.Interfaces/obj/Debug/net6.0/Visual-Capture.Interfaces.dll
+/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.Interfaces/obj/Debug/net6.0/refint/Visual-Capture.Interfaces.dll
+/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.Interfaces/obj/Debug/net6.0/Visual-Capture.Interfaces.pdb
+/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.Interfaces/obj/Debug/net6.0/ref/Visual-Capture.Interfaces.dll

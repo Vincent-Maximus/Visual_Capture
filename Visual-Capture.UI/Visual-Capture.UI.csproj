@@ -8,10 +8,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Visual-Capture.BLL\Visual-Capture.BLL.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
       <_ContentIncludedByDefault Remove="wwwroot\css\site.css" />
       <_ContentIncludedByDefault Remove="wwwroot\favicon.ico" />
       <_ContentIncludedByDefault Remove="wwwroot\js\site.js" />
@@ -83,6 +79,11 @@
 
     <ItemGroup>
       <Content Include="Views\.DS_Store" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Visual-Capture.BLL\Visual-Capture.BLL.csproj" />
+      <ProjectReference Include="..\Visual-Capture.DAL\Visual-Capture.DAL.csproj" />
     </ItemGroup>
 
 </Project>

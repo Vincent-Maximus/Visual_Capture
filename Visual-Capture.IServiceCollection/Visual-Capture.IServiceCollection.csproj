@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace>IServiceCollection</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Visual-Capture.BLL\Visual-Capture.BLL.csproj" />
+      <ProjectReference Include="..\Visual-Capture.Contracts\Visual-Capture.Contracts.csproj" />
+      <ProjectReference Include="..\Visual-Capture.DAL\Visual-Capture.DAL.csproj" />
+    </ItemGroup>
+
+</Project>

@@ -1,5 +1,9 @@
 using Microsoft.EntityFrameworkCore;
+using Visual_Capture.BLL.Entities;
+using Visual_Capture.Contracts.DTO;
+using Visual_Capture.Contracts.Interfaces;
 using Visual_Capture.DAL.Data;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,9 +15,10 @@ String connectionString = builder.Configuration.GetConnectionString("VisualCaptu
 builder.Services.AddDbContext<ApplicationDbContext>(opt => opt.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
 
 
-builder.Services.AddScoped<CategoryDal>();
-builder.Services.AddScoped<HomeDal>();
-builder.Services.AddScoped<HomeDal>();
+builder.Services.AddScoped<IDal<CategoryDTO>, CategoryDal>();
+builder.Services.AddScoped<ReservationDal>();
+
+
 
 
 var app = builder.Build();

@@ -239,6 +239,16 @@
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
         }
+      },
+      "Visual-Capture.Contracts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Visual-Capture.Contracts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Visual-Capture.Contracts.dll": {}
+        }
       }
     }
   },
@@ -640,12 +650,18 @@
         "system.runtime.compilerservices.unsafe.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "Visual-Capture.Contracts/1.0.0": {
+      "type": "project",
+      "path": "../Visual-Capture.Contracts/Visual-Capture.Contracts.csproj",
+      "msbuildProject": "../Visual-Capture.Contracts/Visual-Capture.Contracts.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "Microsoft.EntityFrameworkCore >= 6.0.4",
-      "Pomelo.EntityFrameworkCore.MySql >= 6.0.1"
+      "Pomelo.EntityFrameworkCore.MySql >= 6.0.1",
+      "Visual-Capture.Contracts >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -672,7 +688,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.Contracts/Visual-Capture.Contracts.csproj": {
+              "projectPath": "/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.Contracts/Visual-Capture.Contracts.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -26,8 +26,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.DAL/Visual-Capture.DAL.csproj": {
-                "projectPath": "/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.DAL/Visual-Capture.DAL.csproj"
+              "/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.Contracts/Visual-Capture.Contracts.csproj": {
+                "projectPath": "/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.Contracts/Visual-Capture.Contracts.csproj"
               }
             }
           }
@@ -70,14 +70,14 @@
         }
       }
     },
-    "/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.DAL/Visual-Capture.DAL.csproj": {
+    "/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.Contracts/Visual-Capture.Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.DAL/Visual-Capture.DAL.csproj",
-        "projectName": "Visual-Capture.DAL",
-        "projectPath": "/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.DAL/Visual-Capture.DAL.csproj",
+        "projectUniqueName": "/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.Contracts/Visual-Capture.Contracts.csproj",
+        "projectName": "Visual-Capture.Contracts",
+        "projectPath": "/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.Contracts/Visual-Capture.Contracts.csproj",
         "packagesPath": "/Users/vincentmaximus/.nuget/packages/",
-        "outputPath": "/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.DAL/obj/",
+        "outputPath": "/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.Contracts/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/vincentmaximus/.nuget/NuGet/NuGet.Config"
@@ -103,16 +103,6 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "dependencies": {
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[6.0.4, )"
-            },
-            "Pomelo.EntityFrameworkCore.MySql": {
-              "target": "Package",
-              "version": "[6.0.1, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
