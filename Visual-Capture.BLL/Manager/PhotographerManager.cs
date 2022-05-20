@@ -6,51 +6,51 @@ using Visual_Capture.Contracts.Interfaces;
 
 namespace Visual_Capture.BLL.Manager;
 
-public class CategoryManager
+public class PhotographerManager
 {
-    private readonly IDal<CategoryDTO> _categoryDal;
+    private readonly IDal<PhotographerDTO> _photographerDal;
 
-        public CategoryManager(IDal<CategoryDTO> categoryDal)
+        public PhotographerManager(IDal<PhotographerDTO> photographerDal)
         {
-            _categoryDal = categoryDal;
+            _photographerDal = photographerDal;
         }
 
         
         //Get Single data 
-        public CategoryDTO? GetOne(Guid? id)
+        public PhotographerDTO? GetOne(Guid? id)
         {
-            CategoryDTO? obj = _categoryDal.Get(id);
+            PhotographerDTO? obj = _photographerDal.Get(id);
             return obj;
         }
 
 
         //Get All data 
-        public List<CategoryDTO> GetAll()
+        public List<PhotographerDTO> GetAll()
         {
-            List<CategoryDTO> obj = _categoryDal.GetAll();
+            List<PhotographerDTO> obj = _photographerDal.GetAll();
             return obj;
         }
         
         //GET
         [HttpPost]
-        public void Create(CategoryDTO obj)
+        public void Create(PhotographerDTO obj)
         {
-            _categoryDal.Create(obj);
+            _photographerDal.Create(obj);
         }
 
         //GET
         [HttpPost]
-        public void Edit(CategoryDTO obj)
+        public void Edit(PhotographerDTO obj)
         {
-            _categoryDal.Update(obj);
+            _photographerDal.Update(obj);
         }
 
         public bool Delete(Guid id)
         {
             //get object
-            var categoryFromDb = _categoryDal.Delete(id);
+            var photographerFromDb = _photographerDal.Delete(id);
 
-            if (categoryFromDb)
+            if (photographerFromDb)
             {
                 return true;
             }

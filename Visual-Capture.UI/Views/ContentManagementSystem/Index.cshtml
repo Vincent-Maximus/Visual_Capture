@@ -1,11 +1,4 @@
-﻿@* @using Visual_Capture.UI.ViewModels *@
-@using Visual_Capture.BLL.Entities
-@using Visual_Capture.DAL.Data
-@* @model Visual_Capture.DAL.Models.Reservation *@
-@model Visual_Capture.BLL.Entities.ReservationPossibilities
-@* @model List<Visual_Capture.DAL.Models.Reservation> *@
-
-@{
+﻿@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -23,111 +16,41 @@
 
 
 <div class="container">
-    <div class="row">
-        <div class="col">Type</div>
-        <div class="col">Date</div>
-        <div class="col">Amount of people</div>
-        <div class="col">Photographer</div>
+    <div class="subTitle">
+        <div class="main">
+            CMS
+        </div>
+        <div class="description">
+            CRUD's
+        </div>
+    </div>
+    <br/>
+    <div class="row text-center">
+        <div class="col home">
+            <a asp-area="" asp-controller="Photographer" asp-action="Index">Customers</a>
+        </div>
+        <div class="col about">
+            <a asp-area="" asp-controller="Photographer" asp-action="Index">Photographers</a>
+        </div>
+        <div class="col work">
+            <a asp-area="" asp-controller="" asp-action="Index">TypeReservations</a>
+        </div>
+        <div class="col about">
+            <a asp-area="" asp-controller="" asp-action="Index">Reservations</a>
+        </div>
     </div>
 </div>
+
+<div class="spacer-5"></div>
+example template
+<div class="col about">
+    <a asp-area="" asp-controller="Category" asp-action="Index">Categorys</a>
+</div>
+
+
+<!--spacing-->
 <div class="spacer-5"></div>
 
-
-<form method="post" asp-action="Create">
-    <div class="container">
-        <div class="row">
-            <div class="div">
-
-                
-                <label asp-for="AvailableDateTimes"></label>
-                <input asp-for="AvailableDateTimes" class="form-control"/>
-
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="roundBorderButton">
-                <button class="" asp-controller="Home" asp-action="Book" type="submit">Book</button>
-            </div>
-        </div>
-    </div>
-</form>
-
-
-
-
-<!--spacing-->
-<div class="spacer-5"></div>
-
-
-<div class="project color-green">
-    <div class="m-0 p-0 ">
-        <div class="row m-0 p-0">
-            <div class="col-lg-6 col-md-6 m-0 p-0">
-                <div class="musicContextHolder">
-                    <div cl ass="projectTitle">
-                        In Ontwikkeling..
-                    </div>
-                    <div class="context">
-                        De Visual Capture website is nog in ontwikkeling, maar buitengewoon bereikbaar. Benieuwd naar wat Visual Capture voor jouw bedrijf kan betekenen? Aarzel dan niet en neem contact op.
-                    </div>
-                    <div class="roundBorderButton">
-                        <a href="tel:0631521355" class="noAWhite">
-                            Bellen
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6 m-0 p-0">
-                <picture>
-                    <source type="image/webp" srcset="img/homepage/progress/lines.webp">
-                    <source type="image/jpg" srcset="img/homepage/progress/lines.jpg">
-                    <img class="inProgress" alt="">
-                </picture>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!--anchor-->
-<div id="SocialIAm"></div>
-
-<!--spacing-->
-<div class="spacer-15"></div>
-
-<!--spacing-->
-<div class="spacer-15"></div>
-
-
-<div class="projectFullWidth color-yellow">
-    <div class="m-0 p-0 ">
-        <div class="row m-0 p-0">
-            <div class="col-lg-6 col-md-6 m-0 p-0">
-                <div class="musicContextHolder">
-                    <div class="projectTitle noAWhite">
-                        Portrait’s
-                    </div>
-                    <div class="context noAWhite">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-                    </div>
-                    <div class="roundBorderButton">
-                        <a href="https://open.spotify.com/user/jhayudebsy2gfm0fevfs3sxti?si=5256378d52434082" class="noAWhite">
-                            Learn more
-                        </a>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6 m-0 p-0">
-                <picture>
-                    <source type="image/webp" srcset="/img/homepage/weddings/webp/wedding.webp">
-                    <source type="image/png" srcset="/img/homepage/weddings/png/wedding.png">
-                    <img class="musicImg" alt="">
-                </picture>
-            </div>
-        </div>
-    </div>
-</div>
 
 <div class="portfolio-container">
     <div class="m-0 p-0 ">
@@ -195,7 +118,7 @@
                                 <source type="image/webp" srcset="img/homepage/couples/webp/couple_5.webp">
                                 <source type="image/png" srcset="img/homepage/couples/png/couple_5.png">
                                 <img class="mini-portraits" alt="">
-                            </picture> 
+                            </picture>
                         </div>
                         <div class="col-lg-4 col-md-6 col-6 m-0 p-0">
                             <picture>

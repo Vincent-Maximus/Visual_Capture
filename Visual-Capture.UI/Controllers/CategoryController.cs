@@ -20,8 +20,8 @@ namespace Visual_Capture.UI.Controllers
         public IActionResult Index()
         {
             CategoryManager categoryManager = new CategoryManager(_category);
-            // List<Category> obj = categoryManager.GetAll();
-           var categories = categoryManager.GetAll().Select(category => new Category()
+
+            var categories = categoryManager.GetAll().Select(category => new Category()
             {
                 Id = category.Id,
                 Name = category.Name,
@@ -41,27 +41,56 @@ namespace Visual_Capture.UI.Controllers
         {
             return View();
         }
+        //GET
+        [HttpPost]
+        public IActionResult Create(CategoryDTO obj)
+        {
+            CategoryManager categoryManager = new CategoryManager(_category);
+            categoryManager.Create(obj);
+
+            return RedirectToAction("Index");
+        }
 
         //GET
         public IActionResult Edit(Guid id)
         {
-            // var categoryFromDb = _categoryDal.Edit(id);
-            //
-            // //just in case someone deleted at the same time.
-            // if (categoryFromDb == null)
-            // {
-            //     return NotFound();
-            // }
+            CategoryManager categoryManager = new CategoryManager(_category);
+            
+            var obj = categoryManager.GetOne(id);
+            
+            //quick check (just in case it got deleted at the same time 
+            if (obj == null)
+            {
+                return NotFound();
+            }
+            
+            //transfer object 
+            var category = new Category()
+            {
+                Id = obj.Id,
+                Name = obj.Name,
+                DisplayOrder = obj.DisplayOrder,
+                CreateDateTime = obj.CreateDateTime,
+            };
 
-            // return View(categoryFromDb);
-            return View();
+            return View(category);
         }
         
+        //GET
+        [HttpPost]
+        public IActionResult Edit(CategoryDTO obj)
+        {
+            CategoryManager categoryManager = new CategoryManager(_category);
+            categoryManager.Edit(obj);
+
+            return RedirectToAction("Index");
+        }
+
         public IActionResult Delete(Guid id)
         {
-            //get object
-            // var categoryFromDb = _categoryDal.Delete(id);
-            //
+            CategoryManager categoryManager = new CategoryManager(_category);
+            var categoryFromManager = categoryManager.Delete(id);
+
             return RedirectToAction("Index");
         }
     }

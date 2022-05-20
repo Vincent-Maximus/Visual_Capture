@@ -16,6 +16,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(opt => opt.UseMySql(connecti
 
 
 builder.Services.AddScoped<IDal<CategoryDTO>, CategoryDal>();
+builder.Services.AddScoped<IDal<PhotographerDTO>, PhotographerDal>();
 builder.Services.AddScoped<ReservationDal>();
 
 

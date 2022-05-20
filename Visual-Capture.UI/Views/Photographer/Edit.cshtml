@@ -1,0 +1,33 @@
+@model Visual_Capture.BLL.Entities.Photographer
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "_Layout";
+}
+
+<h2>Edit  </h2>
+
+<form method="post" asp-action="Edit">
+    <div class="container">
+        <div class="row">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-control"/>
+            <span asp-validation-for="Name" class="color-yellow"></span>
+        </div>
+        
+
+        <div class="row">
+            <div class="roundBorderButton">
+                <button class="" type="submit">Aanpassen</button>
+            </div>
+
+            <div class="roundBorderButton">
+                <a class="noAWhite" asp-controller="Photographer" asp-action="Index">Terug naar overzicht</a>
+            </div>
+        </div>
+       
+    </div>
+</form>
+
+<partial name="_ValidationScriptsPartial"/>        
+
