@@ -1,35 +1,39 @@
+
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Mvc;
+// using Visual_Capture.Contracts.DTO;
+using Visual_Capture.Contracts.Interfaces;
 
 namespace Visual_Capture.BLL.Entities;
+
 
 public class Reservation
 {
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.None)]
     public Guid Id { get; set; } = Guid.NewGuid();
-    
-    //TODO Change UserId to GUID
-    // public Guid UserId { get; set; }
-    public int UserId { get; set; }
+    //navigation properties 
+    public List<Customer>? Customers { get; set; }
+    public Guid CustomerId { get; set; }
     public DateTime DateTime { get; set; }
     public int AmountPeople { get; set; }
     
-    //navigation properties 
-    public List<User>? Users { get; set; }
-
-
-    public Guid PhotographerId { get; set; }
-    public Photographer? Photographer { set; get; }
+    
+    public ICollection<ReservationPhotographer> reservationPhotographer { get; set; }
 
     public Guid TypeReservationId { get; set; }
-    public TypeReservation? TypeReservation { get; set; } 
+    public List<TypeReservation>? TypeReservation { get; set; } 
+    
+    
+    // private readonly IDal<ReservationDTO> _ReservationDal;
+    //
+    // //GET
+    // [HttpPost]
+    // public void Edit(ReservationDTO obj)
+    // {
+    //     _ReservationDal.Edit(obj);
+    // }
 }
 
-// public enum ReservationType
-// {
-//     COUPLES,
-//     PORTRAITS,
-//     WEDDINGS
-// }
 

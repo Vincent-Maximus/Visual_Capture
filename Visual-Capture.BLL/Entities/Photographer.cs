@@ -12,5 +12,5 @@ public class Photographer
     public string? Name { get; set; }
     
     // Navigation Properties
-    public List<Reservation>? Reservations { get; set; }
+    public ICollection<ReservationPhotographer> reservationPhotographer { get; set; }
 }

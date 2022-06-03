@@ -10,9 +10,9 @@ namespace Visual_Capture.UI.Controllers
 {
     public class PhotographerController : Controller
     {
-        private readonly IDal<PhotographerDTO> _photographer;
+        private readonly IManagerDal<PhotographerDTO> _photographer;
 
-        public PhotographerController(IDal<PhotographerDTO> photographer)
+        public PhotographerController(IManagerDal<PhotographerDTO> photographer)
         {
             _photographer = photographer;
         }

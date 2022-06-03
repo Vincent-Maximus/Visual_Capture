@@ -90,6 +90,9 @@
       <AdditionalFiles Include="Views\Photographer\Create.cshtml" />
       <AdditionalFiles Include="Views\Photographer\Edit.cshtml" />
       <AdditionalFiles Include="Views\Photographer\Index.cshtml" />
+      <AdditionalFiles Include="Views\TypeReservation\Create.cshtml" />
+      <AdditionalFiles Include="Views\TypeReservation\Edit.cshtml" />
+      <AdditionalFiles Include="Views\TypeReservation\Index.cshtml" />
     </ItemGroup>
 
 </Project>

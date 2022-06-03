@@ -4,11 +4,11 @@ using Visual_Capture.Contracts.Interfaces;
 
 namespace Visual_Capture.DAL.Data;
 
-public class PhotographerDal : IDal<PhotographerDTO> 
+public class PhotographerManagerDal : IManagerDal<PhotographerDTO> 
 {
     private readonly ApplicationDbContext _db;
 
-    public PhotographerDal(ApplicationDbContext db)
+    public PhotographerManagerDal(ApplicationDbContext db)
     {
         _db = db;
     }
@@ -41,7 +41,7 @@ public class PhotographerDal : IDal<PhotographerDTO>
     }
 
     //save changes (update item)
-    public bool Update(PhotographerDTO obj)
+    public bool Edit(PhotographerDTO obj)
     {
         _db.Photographers.Update(obj);
         _db.SaveChanges();

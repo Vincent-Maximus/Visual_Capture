@@ -1,41 +1,30 @@
-using Microsoft.EntityFrameworkCore;
 using Visual_Capture.Contracts.DTO;
 using Visual_Capture.Contracts;
-using Visual_Capture.DAL.Data;
+using Visual_Capture.Contracts.Interfaces;
 
 namespace Visual_Capture.DAL.Data;
 
-public class ReservationDal 
+public class ReservationManagerDal : IManagerDal<ReservationDTO>, IDal<ReservationDTO>
 {
     private readonly ApplicationDbContext _db;
 
-    public ReservationDal(ApplicationDbContext db)
+    public ReservationManagerDal(ApplicationDbContext db)
     {
         _db = db;
     }
 
-    //GetOne
     public ReservationDTO Get(Guid? id)
     {
         return _db.Reservations.Find(id);
     }
     
-    
-    //GetAll
+    //Get
     public List<ReservationDTO> GetAll()
     {
         return _db.Reservations.ToList();
     }
 
-    //Combine Data
-    // public List<ReservationDTO> GetReservations()
-    // {
-    //     return _db.Reservations
-    //         .Include(x => x.TypeReservation)
-    //         .Include( x => x.Photographer).ToList();
-    // }
-
-    //create
+    //Create
     public bool Create(ReservationDTO obj)
     {
         _db.Reservations.Add(obj);
@@ -43,49 +32,39 @@ public class ReservationDal
         
         return true;
     }
-    
+
     //get edit/id data
-    public object Update(Guid? id)
+    public object Edit(Guid? id)
     {
         return _db.Reservations.Find(id)!;
     }
-    
+
     //save changes (update item)
-    public bool Update(ReservationDTO obj)
+    public bool Edit(ReservationDTO obj)
     {
         _db.Reservations.Update(obj);
         _db.SaveChanges();
         
         return true;
     }
-    
+
+    //Delete
+
     //get delete/id data
     public bool Delete(Guid? id)
     {
-        var reservationFromDb = _db.Reservations.Find(id);
+        var ReservationFromDb = _db.Reservations.Find(id);
 
         //just in case someone deleted at the same time.
-        if (reservationFromDb == null)
+        if (ReservationFromDb == null)
         {
             return false;
         }
 
         //actually remove from the database
-        _db.Reservations.Remove(reservationFromDb);
+        _db.Reservations.Remove(ReservationFromDb);
         _db.SaveChanges();
 
         return true;
     }
-    
-
-    #region TypeReservation
-
-    //get
-    public List<TypeReservationDTO> GetTypeReservations()
-    {
-        return _db.TypeReservations.ToList();
-    }
-    
-    
-    #endregion
 }

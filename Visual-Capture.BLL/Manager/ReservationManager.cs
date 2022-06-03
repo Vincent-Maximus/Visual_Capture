@@ -8,39 +8,55 @@ namespace Visual_Capture.BLL.Manager;
 
 public class ReservationManager
 {
-    private readonly IDal<ReservationDTO> _reservationDal;
+    private readonly IManagerDal<ReservationDTO> _reservationManagerDal;
 
-    public ReservationManager(IDal<ReservationDTO> reservationDal)
-    {
-        _reservationDal = reservationDal;
-    }
+        public ReservationManager(IManagerDal<ReservationDTO> reservationManagerDal)
+        {
+            _reservationManagerDal = reservationManagerDal;
+        }
 
-    //Get Single data 
-    public ReservationDTO? GetOne(Guid? id)
-    {
-        ReservationDTO? obj = _reservationDal.Get(id);
-        return obj;
-    }
+        
+        //Get Single data 
+        public ReservationDTO? GetOne(Guid? id)
+        {
+            ReservationDTO? obj = _reservationManagerDal.Get(id);
+            return obj;
+        }
 
 
-    //Get All data 
-    public List<ReservationDTO> GetAllReservationDTO()
-    {
-        List<ReservationDTO> obj = _reservationDal.GetAll();
-        return obj;
-    }
+        //Get All data 
+        public List<ReservationDTO> GetAll()
+        {
+            List<ReservationDTO> obj = _reservationManagerDal.GetAll();
+            return obj;
+        }
+        
+        //GET
+        [HttpPost]
+        public void Create(ReservationDTO obj)
+        {
+            _reservationManagerDal.Create(obj);
+        }
+        
+        
+        //GET
+        [HttpPost]
+        public void Edit(ReservationDTO obj)
+        {
+            _reservationManagerDal.Edit(obj);
+        }
 
-    //GET
-    [HttpPost]
-    public void Create(ReservationDTO obj)
-    {
-        _reservationDal.Create(obj);
-    }
+        public bool Delete(Guid id)
+        {
+            //get object
+            var ReservationFromDb = _reservationManagerDal.Delete(id);
 
-    [HttpPost]
-    public void Create(ReservationPossibilitiesDTO model)
-    {
-        //  check model.EmployeeId 
-        //  to do : Save and redirect 
-    }
+            if (ReservationFromDb)
+            {
+                return true;
+            }
+
+            return false;
+            // return RedirectToAction("Index");
+        }
 }

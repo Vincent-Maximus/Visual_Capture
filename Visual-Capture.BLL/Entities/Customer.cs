@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Visual_Capture.BLL.Entities;
 
-public class User
+public class Customer
 {
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.None)]

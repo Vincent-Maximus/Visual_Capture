@@ -15,9 +15,13 @@ String connectionString = builder.Configuration.GetConnectionString("VisualCaptu
 builder.Services.AddDbContext<ApplicationDbContext>(opt => opt.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
 
 
-builder.Services.AddScoped<IDal<CategoryDTO>, CategoryDal>();
-builder.Services.AddScoped<IDal<PhotographerDTO>, PhotographerDal>();
-builder.Services.AddScoped<ReservationDal>();
+builder.Services.AddScoped<IManagerDal<CategoryDTO>, CategoryManagerDal>();
+builder.Services.AddScoped<IManagerDal<PhotographerDTO>, PhotographerManagerDal>();
+builder.Services.AddScoped<IManagerDal<CustomerDTO>, CustomerManagerDal>();
+builder.Services.AddScoped<IManagerDal<TypeReservationDTO>, TypeReservationManagerDal>();
+builder.Services.AddScoped<IManagerDal<ReservationDTO>, ReservationManagerDal>();
+builder.Services.AddScoped<IManagerDal<ReservationPhotographerDTO>, ReservationPhotographerDAL>();
+// builder.Services.AddScoped<ReservationDal>();
 
 
 

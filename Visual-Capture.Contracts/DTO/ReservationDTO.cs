@@ -11,25 +11,17 @@ public class ReservationDTO
     
     //TODO Change UserId to GUID
     // public Guid UserId { get; set; }
-    public int UserId { get; set; }
+    public Guid CustomerId { get; set; }
     public DateTime DateTime { get; set; }
     public int AmountPeople { get; set; }
     
     //navigation properties 
-    public List<UserDTO>? Users { get; set; }
+    public List<CustomerDTO>? Customer { get; set; }
 
-
-    public Guid PhotographerId { get; set; }
-    public PhotographerDTO? Photographer { set; get; }
+    
+    public ICollection<ReservationPhotographerDTO> reservationPhotographer { get; set; }
 
     public Guid TypeReservationId { get; set; }
     public TypeReservationDTO? TypeReservation { get; set; } 
 }
-
-// public enum ReservationType
-// {
-//     COUPLES,
-//     PORTRAITS,
-//     WEDDINGS
-// }
 

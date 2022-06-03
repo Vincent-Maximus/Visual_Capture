@@ -10,9 +10,9 @@ namespace Visual_Capture.UI.Controllers
 {
     public class CategoryController : Controller
     {
-        private readonly IDal<CategoryDTO> _category;
+        private readonly IManagerDal<CategoryDTO> _category;
 
-        public CategoryController(IDal<CategoryDTO> category)
+        public CategoryController(IManagerDal<CategoryDTO> category)
         {
             _category = category;
         }

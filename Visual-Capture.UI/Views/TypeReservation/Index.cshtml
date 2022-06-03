@@ -1,0 +1,34 @@
+@model List<Visual_Capture.BLL.Entities.TypeReservation>
+
+@{
+    ViewBag.Title = "Customer";
+    Layout = "_Layout";
+}
+
+<h2>Customer</h2>
+
+<div>
+    <a asp-controller="TypeReservation" asp-action="Create">Create</a>
+</div>
+<br/>
+
+<div class="container">
+    <div class="row">
+        <div class="col">TypeReservation Id</div>
+        <div class="col">TypeReservation Name</div>
+        <div class="col">TypeReservation Price</div>
+        <div class="col">TypeReservation MinPrice</div>
+    </div>
+    @foreach (var obj in Model)
+    {
+        <div class="row">
+            <div class="col">@obj.Id</div>
+            <div class="col">@obj.Name</div>
+            <div class="col">@obj.Price</div>
+            <div class="col">@obj.MinPeople</div>
+            <a asp-controller="TypeReservation" asp-action="Edit" asp-route-id="@obj.Id">Edit</a> -
+            <a asp-controller="TypeReservation" asp-action="Delete" asp-route-id="@obj.Id">Delete</a>
+        </div>
+    }
+    
+</div>

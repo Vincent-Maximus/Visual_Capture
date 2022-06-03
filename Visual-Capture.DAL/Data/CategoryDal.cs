@@ -4,11 +4,11 @@ using Visual_Capture.Contracts.Interfaces;
 
 namespace Visual_Capture.DAL.Data;
 
-public class CategoryDal : IDal<CategoryDTO> 
+public class CategoryManagerDal : IManagerDal<CategoryDTO> 
 {
     private readonly ApplicationDbContext _db;
 
-    public CategoryDal(ApplicationDbContext db)
+    public CategoryManagerDal(ApplicationDbContext db)
     {
         _db = db;
     }
@@ -41,7 +41,7 @@ public class CategoryDal : IDal<CategoryDTO>
     }
 
     //save changes (update item)
-    public bool Update(CategoryDTO obj)
+    public bool Edit(CategoryDTO obj)
     {
         _db.Categories.Update(obj);
         _db.SaveChanges();

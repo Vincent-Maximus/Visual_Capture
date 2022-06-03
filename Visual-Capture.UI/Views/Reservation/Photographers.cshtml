@@ -1,0 +1,26 @@
+@model Visual_Capture.BLL.Entities.ReservationPhotographerView
+
+@{
+    ViewBag.Title = "Photographers";
+    Layout = "_Layout";
+}
+
+<h2>Edit </h2>
+
+<div class="row">
+    <div class="col">Id</div>
+    <div class="col">CustomerId</div>
+    <div class="col">DateTime</div>
+    <div class="col">AmountPeople</div>
+    <div class="col">PhotographerId</div>
+    <div class="col">TypeReservationId</div>
+</div>
+
+@foreach (var obj in Model.Photographers)
+{
+    <div class="row">
+        <div class="col">@obj.Id</div>
+        <div class="col">@obj.Name</div>
+    </div>
+}
+<partial name="_ValidationScriptsPartial"/>

@@ -1,0 +1,72 @@
+@model Visual_Capture.BLL.Entities.Reservation
+
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "_Layout";
+}
+
+<h2>Create</h2>
+
+<form method="post">
+    <div class="container">
+        <div class="row">
+            <label asp-for="Id"></label>
+            <input asp-for="Id" class="form-control"/>
+            <span asp-validation-for="Id" class="color-yellow"></span>
+        </div>
+
+        <div class="row">
+            <label asp-for="Customers"></label>
+            <select asp-for="CustomerId" asp-items="@(new SelectList(Model.Customers, nameof(Customer.Id), nameof(Customer.Name)))">
+                <option>Please select a customer</option>
+            </select>
+            <span asp-validation-for="Customers" class="color-yellow"></span>
+        </div>
+    
+        <div class="row">
+            <label asp-for="DateTime"></label>
+            <input asp-for="DateTime" class="form-control"/>
+            <span asp-validation-for="DateTime" class="color-yellow"></span>
+        </div>
+        
+        <div class="row">
+            <label asp-for="AmountPeople"></label>
+            <input asp-for="AmountPeople" class="form-control"/>
+            <span asp-validation-for="AmountPeople" class="color-yellow"></span>
+        </div>
+        @* <div class="row"> *@
+        @*     <label asp-for="PhotographerId"></label> *@
+        @*     <input asp-for="PhotographerId" class="form-control"/> *@
+        @*     <span asp-validation-for="PhotographerId" class="color-yellow"></span> *@
+        @* </div> *@
+        @* *@
+        
+        @* <div class="row"> *@
+        @*             <label asp-for="Photographer"></label> *@
+        @*             <select asp-for="PhotographerId" asp-items="@(new SelectList(Model.Photographer, nameof(Photographer.Id), nameof(Photographer.Name)))"> *@
+        @*                   <option>Please select a photographer</option> *@
+        @*               </select> *@
+        @*             <span asp-validation-for="Photographer" class="color-yellow"></span> *@
+        @*         </div> *@
+        
+        <div class="row">
+            <label asp-for="TypeReservationId"></label>
+            <input asp-for="TypeReservationId" class="form-control"/>
+            <span asp-validation-for="TypeReservationId" class="color-yellow"></span>
+        </div>
+
+        <div class="row">
+            <div class="roundBorderButton">
+                <button class="" type="submit">Aanmaken</button>
+            </div>
+
+            <div class="roundBorderButton">
+                <a class="noAWhite" asp-controller="Reservation" asp-action="Index">Terug naar overzicht</a>
+            </div>
+        </div>
+
+    </div>
+</form>
+
+<partial name="_ValidationScriptsPartial"/>

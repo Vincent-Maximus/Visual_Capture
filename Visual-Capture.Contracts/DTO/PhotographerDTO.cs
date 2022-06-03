@@ -12,5 +12,6 @@ public class PhotographerDTO
     public string? Name { get; set; }
     
     // Navigation Properties
-    public List<ReservationDTO>? Reservations { get; set; }
+    // public ReservationPhotographerDTO? reservationPhotographer { get; set; }
+    public ICollection<ReservationPhotographerDTO> reservationPhotographer { get; set; }
 }

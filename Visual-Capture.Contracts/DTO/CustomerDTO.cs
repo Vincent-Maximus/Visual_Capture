@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Visual_Capture.Contracts.DTO;
 
-public class UserDTO
+public class CustomerDTO
 {
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.None)]

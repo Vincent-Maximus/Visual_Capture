@@ -8,18 +8,18 @@ namespace Visual_Capture.BLL.Manager;
 
 public class PhotographerManager
 {
-    private readonly IDal<PhotographerDTO> _photographerDal;
+    private readonly IManagerDal<PhotographerDTO> _photographerManagerDal;
 
-        public PhotographerManager(IDal<PhotographerDTO> photographerDal)
+        public PhotographerManager(IManagerDal<PhotographerDTO> photographerManagerDal)
         {
-            _photographerDal = photographerDal;
+            _photographerManagerDal = photographerManagerDal;
         }
 
         
         //Get Single data 
         public PhotographerDTO? GetOne(Guid? id)
         {
-            PhotographerDTO? obj = _photographerDal.Get(id);
+            PhotographerDTO? obj = _photographerManagerDal.Get(id);
             return obj;
         }
 
@@ -27,7 +27,7 @@ public class PhotographerManager
         //Get All data 
         public List<PhotographerDTO> GetAll()
         {
-            List<PhotographerDTO> obj = _photographerDal.GetAll();
+            List<PhotographerDTO> obj = _photographerManagerDal.GetAll();
             return obj;
         }
         
@@ -35,20 +35,20 @@ public class PhotographerManager
         [HttpPost]
         public void Create(PhotographerDTO obj)
         {
-            _photographerDal.Create(obj);
+            _photographerManagerDal.Create(obj);
         }
 
         //GET
         [HttpPost]
         public void Edit(PhotographerDTO obj)
         {
-            _photographerDal.Update(obj);
+            _photographerManagerDal.Edit(obj);
         }
 
         public bool Delete(Guid id)
         {
             //get object
-            var photographerFromDb = _photographerDal.Delete(id);
+            var photographerFromDb = _photographerManagerDal.Delete(id);
 
             if (photographerFromDb)
             {

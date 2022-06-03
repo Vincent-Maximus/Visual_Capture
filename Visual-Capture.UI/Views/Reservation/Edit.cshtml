@@ -1,0 +1,57 @@
+@model Visual_Capture.BLL.Entities.Reservation
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "_Layout";
+}
+
+<h2>Edit </h2>
+
+@ViewBag.customers
+
+<form method="post" asp-action="Edit">
+    <div class="container">
+        <div class="row">
+            <label asp-for="Id"></label>
+            <input asp-for="Id" class="form-control"/>
+            <span asp-validation-for="Id" class="color-yellow"></span>
+        </div>
+        <div class="row">
+            <label asp-for="CustomerId"></label>
+            <input asp-for="CustomerId" class="form-control"/>
+            <span asp-validation-for="CustomerId" class="color-yellow"></span>
+        </div>
+        <div class="row">
+            <label asp-for="DateTime"></label>
+            <input asp-for="DateTime" class="form-control"/>
+            <span asp-validation-for="DateTime" class="color-yellow"></span>
+        </div>
+        <div class="row">
+            <label asp-for="AmountPeople"></label>
+            <input asp-for="AmountPeople" class="form-control"/>
+            <span asp-validation-for="AmountPeople" class="color-yellow"></span>
+        </div>
+        @* <div class="row"> *@
+        @*     <label asp-for="PhotographerId"></label> *@
+        @*     <input asp-for="PhotographerId" class="form-control"/> *@
+        @*     <span asp-validation-for="PhotographerId" class="color-yellow"></span> *@
+        @* </div> *@
+        <div class="row">
+            <label asp-for="TypeReservationId"></label>
+            <input asp-for="TypeReservationId" class="form-control"/>
+            <span asp-validation-for="TypeReservationId" class="color-yellow"></span>
+        </div>
+        <div class="row">
+            <div class="roundBorderButton">
+                <button class="" type="submit">Aanpassen</button>
+            </div>
+
+            <div class="roundBorderButton">
+                <a class="noAWhite" asp-controller="Reservation" asp-action="Index">Terug naar overzicht</a>
+            </div>
+        </div>
+
+    </div>
+</form>
+
+<partial name="_ValidationScriptsPartial"/>

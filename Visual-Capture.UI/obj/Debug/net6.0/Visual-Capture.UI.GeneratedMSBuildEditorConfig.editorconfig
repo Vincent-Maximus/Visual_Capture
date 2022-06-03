@@ -33,6 +33,24 @@ build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGhvdG9ncmFwaGVyL0luZGV4LmNz
 build_metadata.AdditionalFiles.CssScope = 
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.UI/Views/TypeReservation/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = 
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVHlwZVJlc2VydmF0aW9uL0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.UI/Views/TypeReservation/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = 
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVHlwZVJlc2VydmF0aW9uL0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.UI/Views/TypeReservation/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = 
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVHlwZVJlc2VydmF0aW9uL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.UI/Views/Category/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0ZWdvcnkvQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -49,6 +67,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29udGVudE1hbmFnZW1lbnRTeXN0ZW0vSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.UI/Views/Customer/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ3VzdG9tZXIvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.UI/Views/Customer/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ3VzdG9tZXIvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.UI/Views/Customer/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ3VzdG9tZXIvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.UI/Views/Home/Book.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Cb29rLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -59,6 +89,22 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.UI/Views/Home/Reservations.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9SZXNlcnZhdGlvbnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.UI/Views/Reservation/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVzZXJ2YXRpb24vQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.UI/Views/Reservation/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVzZXJ2YXRpb24vRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.UI/Views/Reservation/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVzZXJ2YXRpb24vSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.UI/Views/Reservation/Photographers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVzZXJ2YXRpb24vUGhvdG9ncmFwaGVycy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/vincentmaximus/RiderProjects/Visual_Capture/Visual-Capture.UI/Views/Shared/_ValidationScriptsPartial.cshtml]

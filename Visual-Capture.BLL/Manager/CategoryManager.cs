@@ -8,18 +8,18 @@ namespace Visual_Capture.BLL.Manager;
 
 public class CategoryManager
 {
-    private readonly IDal<CategoryDTO> _categoryDal;
+    private readonly IManagerDal<CategoryDTO> _categoryManagerDal;
 
-        public CategoryManager(IDal<CategoryDTO> categoryDal)
+        public CategoryManager(IManagerDal<CategoryDTO> categoryManagerDal)
         {
-            _categoryDal = categoryDal;
+            _categoryManagerDal = categoryManagerDal;
         }
 
         
         //Get Single data 
         public CategoryDTO? GetOne(Guid? id)
         {
-            CategoryDTO? obj = _categoryDal.Get(id);
+            CategoryDTO? obj = _categoryManagerDal.Get(id);
             return obj;
         }
 
@@ -27,7 +27,7 @@ public class CategoryManager
         //Get All data 
         public List<CategoryDTO> GetAll()
         {
-            List<CategoryDTO> obj = _categoryDal.GetAll();
+            List<CategoryDTO> obj = _categoryManagerDal.GetAll();
             return obj;
         }
         
@@ -35,20 +35,20 @@ public class CategoryManager
         [HttpPost]
         public void Create(CategoryDTO obj)
         {
-            _categoryDal.Create(obj);
+            _categoryManagerDal.Create(obj);
         }
 
         //GET
         [HttpPost]
         public void Edit(CategoryDTO obj)
         {
-            _categoryDal.Update(obj);
+            _categoryManagerDal.Edit(obj);
         }
 
         public bool Delete(Guid id)
         {
             //get object
-            var categoryFromDb = _categoryDal.Delete(id);
+            var categoryFromDb = _categoryManagerDal.Delete(id);
 
             if (categoryFromDb)
             {
