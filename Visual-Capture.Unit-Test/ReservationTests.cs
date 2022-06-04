@@ -56,4 +56,76 @@ public class ReservationTests
         //Test
         Assert.IsNull(reservation);
     }
+    
+    // ________________________________
+    [TestMethod]
+    public void GetAll_ShouldReturnNull_IfThereAreNoReservations()
+    {
+        // Dummy Data
+        List<ReservationDTO> _reservationDTO = new List<ReservationDTO>();
+        _reservationMock.Setup(x => x.GetAll()).Returns(() => null);
+
+        //Run
+        var reservation = _sut.GetAll();
+
+        //Test
+        Assert.IsNull(reservation);
+    }
+
+
+    [TestMethod]
+    public void Create_ShouldNotReturnGivenListOfReservations()
+    {
+        // Dummy Data
+        var reservationId = Guid.NewGuid();
+        var reservationCustomerId = Guid.NewGuid();
+        var reservationDateTime = DateTime.Now;
+        var reservationAmountPeople = 5;
+
+        var ReservationDTO = new ReservationDTO()
+        {
+            Id = reservationId,
+            CustomerId = reservationCustomerId,
+            DateTime = reservationDateTime,
+            AmountPeople = reservationAmountPeople,
+        };
+        
+        _reservationMock.Setup(x => x.Create(ReservationDTO))
+            .Returns(null);
+
+        //Run
+        var reservation = _sut.Create(ReservationDTO);
+
+        //Test
+        Assert.AreNotEqual(reservation, ReservationDTO);
+    }
+
+    [TestMethod]
+    public void Create_ShouldReturnFalse_IfQueryUnsuccessful()
+    {
+        //this is hard to test the otherwise around, because it requires the Dal to be connected. (witch is not what we want)
+        // Dummy Data
+        var reservationId = Guid.NewGuid();
+        var reservationCustomerId = Guid.NewGuid();
+        var reservationDateTime = DateTime.Now;
+        var reservationAmountPeople = 5;
+
+        var ReservationDTO = new ReservationDTO()
+        {
+            Id = reservationId,
+            CustomerId = reservationCustomerId,
+            DateTime = reservationDateTime,
+            AmountPeople = reservationAmountPeople,
+        };
+
+        _reservationMock.Setup(x => x.Create(ReservationDTO))
+            .Returns(null);
+
+        //Run
+        var reservation = _sut.Create(ReservationDTO);
+
+        //Test
+        Assert.IsFalse(reservation);
+    }
+    
 }
