@@ -8,9 +8,6 @@ public class ReservationDTO
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.None)]
     public Guid Id { get; set; } = Guid.NewGuid();
-    
-    //TODO Change UserId to GUID
-    // public Guid UserId { get; set; }
     public Guid CustomerId { get; set; }
     public DateTime DateTime { get; set; }
     public int AmountPeople { get; set; }

@@ -33,9 +33,16 @@ public class ReservationManager
         
         //GET
         [HttpPost]
-        public void Create(ReservationDTO obj)
+        public bool Create(ReservationDTO obj)
         {
             _reservationManagerDal.Create(obj);
+            
+            if (_reservationManagerDal.Create(obj) == false)
+            {
+                return false;
+            }
+            
+            return true;
         }
         
         
