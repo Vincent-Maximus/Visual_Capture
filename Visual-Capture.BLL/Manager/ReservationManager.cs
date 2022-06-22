@@ -20,6 +20,7 @@ public class ReservationManager
         public ReservationDTO? GetOne(Guid? id)
         {
             ReservationDTO? obj = _reservationManagerDal.Get(id);
+            // Reservation? obj = _reservationManagerDal.Get(id);
             return obj;
         }
 
@@ -35,8 +36,6 @@ public class ReservationManager
         [HttpPost]
         public bool Create(ReservationDTO obj)
         {
-            _reservationManagerDal.Create(obj);
-            
             if (_reservationManagerDal.Create(obj) == false)
             {
                 return false;

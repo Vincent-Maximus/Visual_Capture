@@ -17,5 +17,8 @@ public class Customer
     public string? PhoneNumber { get; set; }
     
     // Navigation Properties
-    public List<Reservation>? Reservations { get; set; }
+    // public List<Reservation>? Reservations { get; set; }
+    
+    private readonly List<Reservation> _reservations = new List<Reservation>();
+    public ICollection<Reservation> Reservations => _reservations.AsReadOnly();
 }

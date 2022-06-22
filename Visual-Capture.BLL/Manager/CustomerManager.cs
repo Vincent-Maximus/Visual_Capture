@@ -47,8 +47,7 @@ public class CustomerManager
     [HttpPost]
     public bool Create(CustomerDTO obj)
     {
-        _customersManagerDal.Create(obj);
-        
+
         if (_customersManagerDal.Create(obj) == false)
         {
             return false;

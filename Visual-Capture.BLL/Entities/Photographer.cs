@@ -12,5 +12,8 @@ public class Photographer
     public string? Name { get; set; }
     
     // Navigation Properties
-    public ICollection<ReservationPhotographer> reservationPhotographer { get; set; }
+    // public ICollection<ReservationPhotographer> reservationPhotographer { get; set; }
+
+    private readonly List<ReservationPhotographer> _reservationPhotographer = new List<ReservationPhotographer>();
+    public ICollection<ReservationPhotographer> reservationPhotographer => _reservationPhotographer.AsReadOnly();
 }

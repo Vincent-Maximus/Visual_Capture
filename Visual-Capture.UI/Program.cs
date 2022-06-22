@@ -23,9 +23,6 @@ builder.Services.AddScoped<IManagerDal<ReservationDTO>, ReservationManagerDal>()
 builder.Services.AddScoped<IManagerDal<ReservationPhotographerDTO>, ReservationPhotographerDAL>();
 // builder.Services.AddScoped<ReservationDal>();
 
-
-
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

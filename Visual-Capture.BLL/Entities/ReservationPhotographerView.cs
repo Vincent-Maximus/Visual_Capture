@@ -18,9 +18,17 @@ public class ReservationPhotographerView
     public DateTime DateTime { get; set; }
     public int AmountPeople { get; set; }
     
-    public List<Photographer> Photographers { get; set; }
-    
+    // public List<Photographer> Photographers { get; set; }
+
+    private readonly List<Photographer> _photographers = new List<Photographer>();
+    public ICollection<Photographer> Photographers => _photographers.AsReadOnly();
+
     public Guid TypeReservationId { get; set; }
+
+    public ReservationPhotographerView(List<Photographer> photographers)
+    {
+            _photographers.AddRange(photographers);
+    }
 }
 
 

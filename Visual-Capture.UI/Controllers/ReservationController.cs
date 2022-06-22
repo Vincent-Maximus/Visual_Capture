@@ -128,8 +128,7 @@ namespace Visual_Capture.UI.Controllers
         {
             ReservationManager ReservationManager = new ReservationManager(_Reservation);
             PhotographerManager PhotographerManager = new PhotographerManager(_Photographer);
-            ReservationPhotographerManager ReservationPhotographerManager =
-                new ReservationPhotographerManager(_ReservationPhotographer);
+            ReservationPhotographerManager ReservationPhotographerManager = new ReservationPhotographerManager(_ReservationPhotographer);
 
             var obj = ReservationManager.GetOne(id);
 
@@ -168,15 +167,13 @@ namespace Visual_Capture.UI.Controllers
             }
 
             //transfer object 
-            var ReservationPhotographerView = new ReservationPhotographerView()
+            var ReservationPhotographerView = new ReservationPhotographerView(photographers)
             {
                 CustomerId = obj.CustomerId,
                 DateTime = obj.DateTime,
                 AmountPeople = obj.AmountPeople,
-                Photographers = photographers,
                 TypeReservationId = obj.TypeReservationId,
             };
-
 
             return View(ReservationPhotographerView);
         }

@@ -20,7 +20,10 @@ public class Reservation
     public int AmountPeople { get; set; }
     
     
-    public ICollection<ReservationPhotographer> reservationPhotographer { get; set; }
+    // public ICollection<ReservationPhotographer> reservationPhotographer { get; set; }
+    
+    private readonly List<ReservationPhotographer> _reservationPhotographer = new List<ReservationPhotographer>();
+    public ICollection<ReservationPhotographer> reservationPhotographer => _reservationPhotographer.AsReadOnly();
 
     public Guid TypeReservationId { get; set; }
     public List<TypeReservation>? TypeReservation { get; set; } 
